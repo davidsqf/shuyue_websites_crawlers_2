@@ -11,7 +11,6 @@ For each article, append a row to results.csv in the format:
 from __future__ import annotations
 import csv
 import re
-import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, MINYEAR
 from pathlib import Path
@@ -20,6 +19,7 @@ from urllib.parse import urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
+from logging_utils import setup_logger
 
 # --------------------------------------------------------------------------- #
 # CONFIG
@@ -52,6 +52,8 @@ TIMEOUT = 30
 DATE_RX_FULL   = re.compile(r"\b\d{1,2}\s+\w+\s+\d{4}\b")   # 26 November 2025
 DATE_RX_YM     = re.compile(r"\b\w+\s+\d{4}\b")             # November 2025
 YEAR_PAGE_RX   = re.compile(r"/(media-releases|speeches)/\d{4}/?$")
+
+logger = setup_logger("RBA")
 
 # --------------------------------------------------------------------------- #
 # UTILS
@@ -125,7 +127,7 @@ def gather_article_meta(urls: Iterable[str]) -> List[Tuple[str, str, str]]:
             try:
                 results.append(fut.result())
             except Exception as exc:
-                print(f"[WARN] {futures[fut]} → {exc}")
+                logger.warning("Failed to parse %s: %s", futures[fut], exc)
     results.sort(key=lambda r: date_key(r[2]), reverse=True)
     return results
 
@@ -193,7 +195,7 @@ def _tests() -> None:
 # --------------------------------------------------------------------------- #
 def main() -> None:
     _tests()
-    print("✔ basic self-tests passed – starting crawl ...")
+    logger.info("Basic self-tests passed – starting crawl")
 
     sections = [
         ("media",    "Media Releases",  crawl_media_releases),
@@ -204,9 +206,9 @@ def main() -> None:
     total_rows = 0
 
     for key, label, fn in sections:
-        print(f"  ↳ {label:17s} …", end="", flush=True)
+        logger.info("Fetching %s", label)
         rows = fn()
-        print(f"{len(rows):5d} articles")
+        logger.info("%s returned %d articles", label, len(rows))
 
         # Append to shared results.csv as (yyyy-mm-dd, title, url)
         with RESULTS_CSV.open("a", newline="", encoding="utf-8") as fh:
@@ -216,9 +218,9 @@ def main() -> None:
                 writer.writerow([iso_date, title, url])
 
         total_rows += len(rows)
-        print(f"     → appended {len(rows)} rows to {RESULTS_CSV.resolve()}")
+        logger.info("Appended %d rows to %s", len(rows), RESULTS_CSV)
 
-    print(f"\n✓ Done. Total {total_rows} rows appended to {RESULTS_CSV.resolve()}.")
+    logger.info("Done. Total %d rows appended to %s", total_rows, RESULTS_CSV)
 
 
 if __name__ == "__main__":

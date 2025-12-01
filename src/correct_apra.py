@@ -5,6 +5,7 @@ from urllib.parse import urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
+from logging_utils import setup_logger
 
 BASE_URL = "https://www.apra.gov.au"
 LIST_URL = "https://www.apra.gov.au/news-and-publications/39"
@@ -14,6 +15,8 @@ RESULTS_CSV = "results.csv"
 DATE_RE = re.compile(
     r"(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)?\s*\d{1,2}\s+[A-Za-z]+\s+\d{4}"
 )
+
+logger = setup_logger("APRA")
 
 
 def get_session() -> requests.Session:
@@ -116,39 +119,45 @@ def main():
     session = get_session()
 
     # Fetch the listing page
-    resp = session.get(LIST_URL, timeout=30)
-    resp.raise_for_status()
+    logger.info("Fetching listing page %s", LIST_URL)
+    try:
+        resp = session.get(LIST_URL, timeout=30)
+        resp.raise_for_status()
+    except requests.RequestException as exc:
+        logger.error("Failed to fetch listing page: %s", exc)
+        return
 
     article_links = extract_article_links(resp.text)
+    logger.info("Found %d candidate article links", len(article_links))
 
     if not article_links:
-        print("No article links were found on the listing page.")
+        logger.warning("No article links were found on the listing page.")
         return
 
     rows = []
 
-    for title, url in article_links:
+    for idx, (title, url) in enumerate(article_links, start=1):
+        logger.info("(%d/%d) Fetching article: %s", idx, len(article_links), url)
         try:
             r = session.get(url, timeout=30)
             r.raise_for_status()
             raw_date = extract_date_from_article(r.text)
             iso_date = normalize_date_to_iso(raw_date)
         except requests.RequestException as e:
-            print(f"Failed to fetch article {url}: {e}")
+            logger.error("Failed to fetch article %s: %s", url, e)
             raw_date = ""
             iso_date = ""
 
         rows.append((iso_date, title, url))
 
-        # Echo to stdout so you can see progress/results
-        print(f"{iso_date} | {title} | {url}")
+        logger.debug("%s | %s | %s", iso_date, title, url)
 
     # Append results to CSV (no header, so you can aggregate from many runs)
     with open(RESULTS_CSV, "a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerows(rows)
 
-    print(f"\nAppended {len(rows)} articles to {RESULTS_CSV}")
+    logger.info("Appended %d articles to %s", len(rows), RESULTS_CSV)
 
 
 if __name__ == "__main__":

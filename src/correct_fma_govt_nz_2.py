@@ -1,10 +1,14 @@
+import csv
+import time
+from datetime import datetime
+
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
-import csv
-import json
-import time
-from datetime import datetime
+from logging_utils import setup_logger
+
+RESULTS_CSV = "results.csv"
+logger = setup_logger("FMA")
 
 
 def normalize_date_to_iso(date_str: str) -> str:
@@ -51,11 +55,11 @@ def fetch_media_releases():
 
     while True:
         if url in visited_urls:
-            print(f"[STOP] Loop detected, stopping at {url}")
+            logger.warning("Loop detected, stopping at %s", url)
             break
 
         visited_urls.add(url)
-        print(f"Fetching: {url}")
+        logger.info("Fetching page: %s", url)
 
         resp = requests.get(url, headers=headers, timeout=30)
         resp.raise_for_status()
@@ -98,29 +102,23 @@ def fetch_media_releases():
 
 def save_results(releases):
     # Append to a shared results file in (yyyy-mm-dd, title, url) format
-    results_csv = "results.csv"
-    with open(results_csv, "a", newline="", encoding="utf-8") as f:
+    with open(RESULTS_CSV, "a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         for r in releases:
             iso_date = normalize_date_to_iso(r["date"])
             writer.writerow([iso_date, r["title"], r["url"]])
 
-    # (Optional) still save JSON if you find it useful
-    json_filename = "fma_media_releases.json"
-    with open(json_filename, "w", encoding="utf-8") as f:
-        json.dump(releases, f, indent=2, ensure_ascii=False)
-
-    print(f"\nAppended {len(releases)} articles to {results_csv}")
-    print(f"Also saved raw data to {json_filename}")
+    logger.info("Appended %d articles to %s", len(releases), RESULTS_CSV)
 
 
 if __name__ == "__main__":
+    logger.info("Starting FMA media releases crawl")
     releases = fetch_media_releases()
-    print(f"\nTotal releases scraped: {len(releases)}")
+    logger.info("Total releases scraped: %d", len(releases))
 
     # Print first few with normalized dates
     for r in releases[:10]:
         iso_date = normalize_date_to_iso(r["date"])
-        print(f"{iso_date} | {r['title']} | {r['url']}")
+        logger.debug("%s | %s | %s", iso_date, r["title"], r["url"])
 
     save_results(releases)
