@@ -1,5 +1,6 @@
 import csv
 import re
+from datetime import datetime
 from urllib.parse import urljoin, urlparse
 
 import requests
@@ -7,7 +8,7 @@ from bs4 import BeautifulSoup
 
 BASE_URL = "https://www.apra.gov.au"
 LIST_URL = "https://www.apra.gov.au/news-and-publications/39"
-OUTPUT_CSV = "apra_news_page_39.csv"
+RESULTS_CSV = "results.csv"
 
 # Matches things like "Friday 28 November 2025" or "28 November 2025"
 DATE_RE = re.compile(
@@ -89,6 +90,28 @@ def extract_date_from_article(html: str) -> str:
     return ""
 
 
+def normalize_date_to_iso(date_str: str) -> str:
+    """
+    Convert a human-readable date like 'Friday 28 November 2025'
+    or '28 November 2025' to 'YYYY-MM-DD'. Returns '' on failure.
+    """
+    if not date_str:
+        return ""
+
+    date_str = " ".join(date_str.split())  # normalize spaces
+
+    # Try with weekday first, then without
+    for fmt in ("%A %d %B %Y", "%d %B %Y"):
+        try:
+            dt = datetime.strptime(date_str, fmt)
+            return dt.strftime("%Y-%m-%d")
+        except ValueError:
+            continue
+
+    # If parsing fails, return empty string (keep CSV structure simple)
+    return ""
+
+
 def main():
     session = get_session()
 
@@ -108,23 +131,24 @@ def main():
         try:
             r = session.get(url, timeout=30)
             r.raise_for_status()
-            date_str = extract_date_from_article(r.text)
+            raw_date = extract_date_from_article(r.text)
+            iso_date = normalize_date_to_iso(raw_date)
         except requests.RequestException as e:
             print(f"Failed to fetch article {url}: {e}")
-            date_str = ""
+            raw_date = ""
+            iso_date = ""
 
-        rows.append((date_str, title, url))
+        rows.append((iso_date, title, url))
 
         # Echo to stdout so you can see progress/results
-        print(f"{date_str} | {title} | {url}")
+        print(f"{iso_date} | {title} | {url}")
 
-    # Write results to CSV
-    with open(OUTPUT_CSV, "w", newline="", encoding="utf-8") as f:
+    # Append results to CSV (no header, so you can aggregate from many runs)
+    with open(RESULTS_CSV, "a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["date", "title", "url"])
         writer.writerows(rows)
 
-    print(f"\nSaved {len(rows)} articles to {OUTPUT_CSV}")
+    print(f"\nAppended {len(rows)} articles to {RESULTS_CSV}")
 
 
 if __name__ == "__main__":

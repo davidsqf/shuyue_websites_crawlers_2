@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """
 Scrape RBA:
-  • Media Releases    → rba_media_releases.csv
-  • Speeches          → rba_speeches.csv
-  • Research (RDPs)   → rba_research.csv
-CSV columns: title, url, date
+  • Media Releases
+  • Speeches
+  • Research (RDPs)
+
+For each article, append a row to results.csv in the format:
+    (yyyy-mm-dd, title, url)
 """
 from __future__ import annotations
 import csv
@@ -42,11 +44,9 @@ RDP_YEAR_PAGES = [                    # NB: hard-coded – avoids JS rendering i
     "https://www.rba.gov.au/publications/rdp/1971-1980.html",
     "https://www.rba.gov.au/publications/rdp/1969-1970.html",
 ]
-OUTFILES = {
-    "media":   Path("rba_media_releases.csv"),
-    "speech":  Path("rba_speeches.csv"),
-    "research": Path("rba_research.csv"),
-}
+
+RESULTS_CSV = Path("results.csv")
+
 MAX_WORKERS = 12
 TIMEOUT = 30
 DATE_RX_FULL   = re.compile(r"\b\d{1,2}\s+\w+\s+\d{4}\b")   # 26 November 2025
@@ -61,12 +61,14 @@ def get_soup(url: str) -> BeautifulSoup:
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
 
+
 def find_first_date(text: str) -> str | None:
     m = DATE_RX_FULL.search(text)
     if m:
         return m.group(0).replace("\u00A0", " ").strip()
     m2 = DATE_RX_YM.search(text)
     return m2.group(0).replace("\u00A0", " ").strip() if m2 else None
+
 
 def date_key(date_str: str) -> datetime:
     for fmt in ("%d %B %Y", "%B %Y"):
@@ -76,14 +78,45 @@ def date_key(date_str: str) -> datetime:
             continue
     return datetime(MINYEAR, 1, 1)
 
+
+def normalize_date_to_iso(date_str: str) -> str:
+    """
+    Convert a human-readable date like '26 November 2025' or 'November 2025'
+    to 'YYYY-MM-DD'. If only month/year is known, use day=1.
+    Returns '' on failure or if date_str is empty/'N/A'.
+    """
+    if not date_str or date_str == "N/A":
+        return ""
+
+    date_str = " ".join(date_str.split())  # normalize spaces
+
+    # Try full day-month-year first
+    try:
+        dt = datetime.strptime(date_str, "%d %B %Y")
+        return dt.strftime("%Y-%m-%d")
+    except ValueError:
+        pass
+
+    # Then try month-year (assume day = 1)
+    try:
+        dt = datetime.strptime(date_str, "%B %Y")
+        return dt.replace(day=1).strftime("%Y-%m-%d")
+    except ValueError:
+        pass
+
+    return ""
+
+
 def gather_article_meta(urls: Iterable[str]) -> List[Tuple[str, str, str]]:
-    """Fetch every article URL → (title, url, date)."""
+    """Fetch every article URL → (title, url, raw_date_str)."""
     results: List[Tuple[str, str, str]] = []
 
     def _worker(u: str) -> Tuple[str, str, str]:
         psoup = get_soup(u)
-        title = (psoup.find("h1") or psoup.title).get_text(strip=True)
-        date  = find_first_date(psoup.get_text(" ", strip=True)) or "N/A"
+        title_el = psoup.find("h1") or psoup.title
+        title = title_el.get_text(strip=True) if title_el else u
+        raw_text = psoup.get_text(" ", strip=True)
+        date = find_first_date(raw_text) or "N/A"
         return title, u, date
 
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
@@ -114,6 +147,7 @@ def crawl_media_releases() -> List[Tuple[str, str, str]]:
                 article_links.add(urljoin(base, href))
     return gather_article_meta(article_links)
 
+
 def crawl_speeches() -> List[Tuple[str, str, str]]:
     base = SEEDS["speech"]
     soup = get_soup(base)
@@ -128,6 +162,7 @@ def crawl_speeches() -> List[Tuple[str, str, str]]:
             if re.search(r"/\d{4}/sp-.*\.html?$", href):
                 article_links.add(urljoin(base, href))
     return gather_article_meta(article_links)
+
 
 def crawl_research() -> List[Tuple[str, str, str]]:
     """
@@ -161,21 +196,30 @@ def main() -> None:
     print("✔ basic self-tests passed – starting crawl ...")
 
     sections = [
-        ("media",    "Media Releases", crawl_media_releases),
-        ("speech",   "Speeches",       crawl_speeches),
+        ("media",    "Media Releases",  crawl_media_releases),
+        ("speech",   "Speeches",        crawl_speeches),
         ("research", "Research (RDPs)", crawl_research),
     ]
+
+    total_rows = 0
 
     for key, label, fn in sections:
         print(f"  ↳ {label:17s} …", end="", flush=True)
         rows = fn()
         print(f"{len(rows):5d} articles")
-        outfile = OUTFILES[key]
-        with outfile.open("w", newline="", encoding="utf-8") as fh:
-            csv.writer(fh).writerows([("title", "url", "date"), *rows])
-        print(f"     → saved to {outfile.resolve()}")
 
-    print("\n✓ All three files written successfully.")
+        # Append to shared results.csv as (yyyy-mm-dd, title, url)
+        with RESULTS_CSV.open("a", newline="", encoding="utf-8") as fh:
+            writer = csv.writer(fh)
+            for title, url, raw_date in rows:
+                iso_date = normalize_date_to_iso(raw_date)
+                writer.writerow([iso_date, title, url])
+
+        total_rows += len(rows)
+        print(f"     → appended {len(rows)} rows to {RESULTS_CSV.resolve()}")
+
+    print(f"\n✓ Done. Total {total_rows} rows appended to {RESULTS_CSV.resolve()}.")
+
 
 if __name__ == "__main__":
     main()
