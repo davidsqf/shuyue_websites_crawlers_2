@@ -10,7 +10,7 @@ from datetime import datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Dict, List
-from urllib.parse import urlparse
+from urllib.parse import parse_qs, urlparse
 
 from correct_apra import scrape_apra
 from correct_fma_govt_nz_2 import scrape_fma
@@ -28,12 +28,14 @@ from paths import (
 logger = setup_logger("WEB")
 
 DEFAULT_REFRESH_SECONDS = 60 * 60  # 1 hour
+ALL_SOURCES_SLUG = "all"
+ALL_SOURCES_TITLE = "All Data Sources"
 
 SOURCES: Dict[str, Dict[str, Path | str]] = {
-    "apra": {"title": "APRA News & Publications", "file": APRA_RESULTS},
-    "fma": {"title": "FMA Media Releases", "file": FMA_RESULTS},
-    "rbnz": {"title": "RBNZ News (latest 30)", "file": RBNZ_RESULTS},
-    "rba": {"title": "RBA News (latest 100)", "file": RBA_RESULTS},
+    "apra": {"title": "APRA News & Publications", "file": APRA_RESULTS, "label": "APRA"},
+    "fma": {"title": "FMA Media Releases", "file": FMA_RESULTS, "label": "FMA"},
+    "rbnz": {"title": "RBNZ News (latest 30)", "file": RBNZ_RESULTS, "label": "RBNZ"},
+    "rba": {"title": "RBA News (latest 100)", "file": RBA_RESULTS, "label": "RBA"},
 }
 
 SCRAPE_FUNCS = {
@@ -42,6 +44,8 @@ SCRAPE_FUNCS = {
     "rbnz": scrape_rbnz,
     "rba": scrape_rba,
 }
+
+VALID_SORT_ORDERS = {"asc", "desc"}
 
 
 def run_all_scrapers():
@@ -111,16 +115,92 @@ def format_timestamp(path: Path) -> str:
     return ts.strftime("%Y-%m-%d %H:%M:%S")
 
 
-def render_table(name: str, title: str, entries: List[Dict[str, str]], refresh_seconds: int) -> str:
-    rows_html = "".join(
-        f"<tr><td>{html.escape(entry['date'])}</td>"
-        f"<td>{html.escape(entry['title'])}</td>"
-        f"<td><a href='{html.escape(entry['url'])}' target='_blank' rel='noopener noreferrer'>link</a></td></tr>"
-        for entry in entries
+def latest_sources_timestamp() -> str:
+    files = [Path(meta["file"]) for meta in SOURCES.values()]
+    existing = [path for path in files if path.exists()]
+    if not existing:
+        return "not found"
+    newest = max(existing, key=lambda path: path.stat().st_mtime)
+    return format_timestamp(newest)
+
+
+def parse_sort_order(raw: str | None) -> str:
+    if raw and raw.lower() in VALID_SORT_ORDERS:
+        return raw.lower()
+    return "desc"
+
+
+def parse_date_value(value: str) -> datetime:
+    if not isinstance(value, str):
+        return datetime.min
+    cleaned = value.strip()
+    for parser in (
+        lambda v: datetime.fromisoformat(v),
+        lambda v: datetime.strptime(v, "%d %B %Y"),
+        lambda v: datetime.strptime(v, "%d %b %Y"),
+    ):
+        try:
+            return parser(cleaned)
+        except Exception:
+            continue
+    return datetime.min
+
+
+def sort_entries(entries: List[Dict[str, str]], sort_order: str) -> List[Dict[str, str]]:
+    reverse = sort_order == "desc"
+    return sorted(
+        entries,
+        key=lambda entry: (parse_date_value(entry.get("date", "")), entry.get("title", "")),
+        reverse=reverse,
     )
 
+
+def build_all_entries() -> List[Dict[str, str]]:
+    combined: List[Dict[str, str]] = []
+    for slug, meta in SOURCES.items():
+        label = str(meta.get("label") or slug.upper())
+        for entry in read_rows(Path(meta["file"])):
+            entry_with_source = dict(entry)
+            entry_with_source["source"] = label
+            combined.append(entry_with_source)
+    return combined
+
+
+def render_table(
+    name: str,
+    title: str,
+    entries: List[Dict[str, str]],
+    refresh_seconds: int,
+    sort_order: str,
+    show_source: bool = False,
+    allow_refresh: bool = True,
+) -> str:
+    col_count = 4 if show_source else 3
+    next_sort = "asc" if sort_order == "desc" else "desc"
+    sort_hint = "newest first" if sort_order == "desc" else "oldest first"
+
+    rows_html = ""
+    for entry in entries:
+        source_cell = ""
+        if show_source:
+            source_cell = f"<td>{html.escape(entry.get('source', 'Unknown'))}</td>"
+        rows_html += (
+            f"<tr>{source_cell}"
+            f"<td>{html.escape(entry.get('date', ''))}</td>"
+            f"<td>{html.escape(entry.get('title', ''))}</td>"
+            f"<td><a href='{html.escape(entry.get('url', ''))}' target='_blank' rel='noopener noreferrer'>link</a></td>"
+            f"</tr>"
+        )
+
     if not rows_html:
-        rows_html = "<tr><td colspan='3' style='text-align:center'>No data available</td></tr>"
+        rows_html = f"<tr><td colspan='{col_count}' style='text-align:center'>No data available</td></tr>"
+
+    refresh_controls = ""
+    if allow_refresh:
+        refresh_controls = f"""
+      <form method="post" action="/refresh/{name}" style="margin:0;">
+        <button type="submit" style="padding:6px 12px; cursor:pointer;">Refresh now</button>
+      </form>"""
 
     auto_refresh_ms = max(refresh_seconds, 5) * 1000
     return f"""
@@ -178,15 +258,22 @@ def render_table(name: str, title: str, entries: List[Dict[str, str]], refresh_s
       <p style="margin: 4px 0 0;">Auto-refresh every {refresh_seconds} seconds.</p>
     </div>
     <div style="display:flex; gap:8px; align-items:center;">
-      <form method="post" action="/refresh/{name}" style="margin:0;">
-        <button type="submit" style="padding:6px 12px; cursor:pointer;">Refresh now</button>
-      </form>
+      {refresh_controls}
       <button onclick="window.location.href='/'" style="padding:6px 12px; cursor:pointer;">Homepage</button>
     </div>
   </header>
   <table>
     <thead>
-      <tr><th style="width: 120px;">Date</th><th>Title</th><th style="width: 70px;">Link</th></tr>
+      <tr>
+        {'<th style="width: 120px;">Source</th>' if show_source else ''}
+        <th style="width: 150px;">
+          <a href='/{name}?sort={next_sort}' style="color:inherit; text-decoration:none;">
+            Date (current: {sort_hint}, switch to {next_sort})
+          </a>
+        </th>
+        <th>Title</th>
+        <th style="width: 70px;">Link</th>
+      </tr>
     </thead>
     <tbody>
       {rows_html}
@@ -198,7 +285,10 @@ def render_table(name: str, title: str, entries: List[Dict[str, str]], refresh_s
 
 
 def render_index(refresh_seconds: int) -> str:
-    cards = []
+    cards = [
+        f"<li><a href='/{ALL_SOURCES_SLUG}'><strong>{html.escape(ALL_SOURCES_TITLE)}</strong></a>"
+        f" — updated {latest_sources_timestamp()}</li>"
+    ]
     for slug, meta in SOURCES.items():
         path = Path(meta["file"])
         cards.append(
@@ -258,6 +348,8 @@ class ResultsHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         parsed = urlparse(self.path)
         path = parsed.path.rstrip("/") or "/"
+        query = parse_qs(parsed.query)
+        sort_order = parse_sort_order((query.get("sort") or [None])[0])
 
         if path == "/":
             body = render_index(self.refresh_seconds)
@@ -265,11 +357,25 @@ class ResultsHandler(BaseHTTPRequestHandler):
             return
 
         slug = path.lstrip("/")
+        if slug == ALL_SOURCES_SLUG:
+            entries = sort_entries(build_all_entries(), sort_order)
+            body = render_table(
+                slug,
+                ALL_SOURCES_TITLE,
+                entries,
+                self.refresh_seconds,
+                sort_order,
+                show_source=True,
+                allow_refresh=False,
+            )
+            self._respond(200, body)
+            return
+
         if slug in SOURCES:
             meta = SOURCES[slug]
             file_path = Path(meta["file"])
-            entries = read_rows(file_path)
-            body = render_table(slug, meta["title"], entries, self.refresh_seconds)
+            entries = sort_entries(read_rows(file_path), sort_order)
+            body = render_table(slug, meta["title"], entries, self.refresh_seconds, sort_order)
             self._respond(200, body)
             return
 
