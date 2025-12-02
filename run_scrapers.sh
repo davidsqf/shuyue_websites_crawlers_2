@@ -2,6 +2,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PYTHON_BIN="${PYTHON_BIN:-python3}"
 
 run_job() {
   local name="$1"
@@ -9,7 +10,7 @@ run_job() {
 
   (
     cd "$ROOT"
-    python -u "$script"
+    "$PYTHON_BIN" -u "$script"
   ) | sed -e "s/^/[$name] /"
 }
 
@@ -20,13 +21,17 @@ run_job "APRA" "src/correct_apra.py" &
 pids+=($!)
 names+=("APRA")
 echo "[META] launching RBA scraper"
-run_job "RBA" "src/correct_rba_3.py" &
+run_job "RBA" "src/correct_rba_news_3.py" &
 pids+=($!)
 names+=("RBA")
 echo "[META] launching FMA scraper"
 run_job "FMA" "src/correct_fma_govt_nz_2.py" &
 pids+=($!)
 names+=("FMA")
+echo "[META] launching RBNZ scraper"
+run_job "RBNZ" "src/correct_rbnz_1.py" &
+pids+=($!)
+names+=("RBNZ")
 
 status=0
 for idx in "${!pids[@]}"; do

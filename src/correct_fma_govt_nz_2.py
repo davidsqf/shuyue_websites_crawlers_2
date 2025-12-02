@@ -2,13 +2,15 @@ import csv
 import time
 import random
 from datetime import datetime
+from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
-from urllib.parse import urljoin
-from logging_utils import setup_logger
 
-RESULTS_CSV = "results.csv"
+from logging_utils import setup_logger
+from paths import FMA_RESULTS
+
+RESULTS_CSV = FMA_RESULTS
 logger = setup_logger("FMA")
 
 
@@ -141,25 +143,31 @@ def fetch_media_releases():
     return releases
 
 
-def save_results(releases):
-    # Append to a shared results file in (yyyy-mm-dd, title, url) format
-    with open(RESULTS_CSV, "a", newline="", encoding="utf-8") as f:
+def save_results(releases, output_path=RESULTS_CSV):
+    # Write to a dedicated results file in (yyyy-mm-dd, title, url) format
+    with open(output_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         for r in releases:
             iso_date = normalize_date_to_iso(r["date"])
             writer.writerow([iso_date, r["title"], r["url"]])
 
-    logger.info("Appended %d articles to %s", len(releases), RESULTS_CSV)
+    logger.info("Saved %d articles to %s", len(releases), output_path)
 
 
-if __name__ == "__main__":
+def scrape_fma(save: bool = True):
     logger.info("Starting FMA media releases crawl")
     releases = fetch_media_releases()
     logger.info("Total releases scraped: %d", len(releases))
 
-    # Print first few with normalized dates
     for r in releases[:10]:
         iso_date = normalize_date_to_iso(r["date"])
         logger.debug("%s | %s | %s", iso_date, r["title"], r["url"])
 
-    save_results(releases)
+    if save:
+        save_results(releases)
+
+    return releases
+
+
+if __name__ == "__main__":
+    scrape_fma(save=True)

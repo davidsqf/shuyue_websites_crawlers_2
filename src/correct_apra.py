@@ -3,15 +3,17 @@ import re
 import time
 import random
 from datetime import datetime
+from typing import List, Tuple
 from urllib.parse import urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
+
 from logging_utils import setup_logger
+from paths import APRA_RESULTS
 
 BASE_URL = "https://www.apra.gov.au"
 LIST_URL = "https://www.apra.gov.au/news-and-publications/39"
-RESULTS_CSV = "results.csv"
 
 # Matches things like "Friday 28 November 2025" or "28 November 2025"
 DATE_RE = re.compile(
@@ -173,25 +175,29 @@ def normalize_date_to_iso(date_str: str) -> str:
     return ""
 
 
-def main():
+def scrape_apra(save: bool = True) -> List[Tuple[str, str, str]]:
+    """
+    Crawl the APRA news listings and return a list of
+    (iso_date, title, url) tuples. When `save` is True, the results
+    overwrite the APRA_RESULTS CSV file.
+    """
     session = get_session()
 
-    # Fetch the listing page
     logger.info("Fetching listing page %s", LIST_URL)
     try:
         resp = fetch_with_retries(session, LIST_URL, timeout=30)
     except requests.RequestException as exc:
         logger.error("Failed to fetch listing page: %s", exc)
-        return
+        return []
 
     article_links = extract_article_links(resp.text)
     logger.info("Found %d candidate article links", len(article_links))
 
     if not article_links:
         logger.warning("No article links were found on the listing page.")
-        return
+        return []
 
-    rows = []
+    rows: List[Tuple[str, str, str]] = []
 
     for idx, (title, url) in enumerate(article_links, start=1):
         logger.info("(%d/%d) Fetching article: %s", idx, len(article_links), url)
@@ -199,21 +205,25 @@ def main():
             r = fetch_with_retries(session, url, timeout=30)
             raw_date = extract_date_from_article(r.text)
             iso_date = normalize_date_to_iso(raw_date)
-        except requests.RequestException as e:
-            logger.error("Failed to fetch article %s: %s", url, e)
+        except requests.RequestException as exc:
+            logger.error("Failed to fetch article %s: %s", url, exc)
             raw_date = ""
             iso_date = ""
 
         rows.append((iso_date, title, url))
-
         logger.debug("%s | %s | %s", iso_date, title, url)
 
-    # Append results to CSV (no header, so you can aggregate from many runs)
-    with open(RESULTS_CSV, "a", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerows(rows)
+    if save:
+        with open(APRA_RESULTS, "w", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerows(rows)
+        logger.info("Saved %d articles to %s", len(rows), APRA_RESULTS)
 
-    logger.info("Appended %d articles to %s", len(rows), RESULTS_CSV)
+    return rows
+
+
+def main():
+    scrape_apra(save=True)
 
 
 if __name__ == "__main__":

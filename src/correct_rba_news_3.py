@@ -19,6 +19,9 @@ import requests
 from bs4 import BeautifulSoup
 from bs4.element import NavigableString, Tag
 
+from logging_utils import setup_logger
+from paths import RBA_RESULTS
+
 BASE_URL = "https://www.rba.gov.au"
 NEWS_URL = f"{BASE_URL}/news/"
 
@@ -29,6 +32,9 @@ HEADERS = {
         "Chrome/119.0.0.0 Safari/537.36"
     )
 }
+
+logger = setup_logger("RBA")
+OUTPUT_FILE = RBA_RESULTS
 
 MONTH_NAMES = (
     "January", "February", "March", "April", "May", "June",
@@ -82,6 +88,7 @@ def parse_date_iso(text: str) -> str:
 # --------------------------------------------------------------------------- #
 
 def fetch_news_page() -> str:
+    logger.info("Fetching %s", NEWS_URL)
     resp = requests.get(NEWS_URL, headers=HEADERS, timeout=30)
     resp.raise_for_status()
     return resp.text
@@ -189,7 +196,7 @@ def parse_news(html: str, limit: int = 100) -> List[Dict[str, Any]]:
 # Output
 # --------------------------------------------------------------------------- #
 
-def save_to_csv(rows: List[Dict[str, Any]], path: str = "rba_news_latest_100.csv") -> None:
+def save_to_csv(rows: List[Dict[str, Any]], path: str = OUTPUT_FILE) -> None:
     """
     Write rows to CSV with NO header line, in the order:
       date,title,url
@@ -198,22 +205,26 @@ def save_to_csv(rows: List[Dict[str, Any]], path: str = "rba_news_latest_100.csv
         writer = csv.writer(f)
         for row in rows:
             writer.writerow([row["date"], row["title"], row["url"]])
+    logger.info("Saved %d rows to %s", len(rows), path)
 
 
-def main() -> None:
+def scrape_rba(save: bool = True) -> List[Dict[str, Any]]:
     html = fetch_news_page()
     articles = parse_news(html, limit=100)
 
-    # Print each line as: YYYY-MM-DD,title,url
-    for art in articles:
-        # This is intentionally plain string formatting, not csv.writer,
-        # so you'll see exactly the format you requested in stdout.
-        print(f"{art['date']},{art['title']},{art['url']}")
+    for art in articles[:5]:
+        logger.debug("%s | %s | %s", art["date"], art["title"], art["url"])
 
-    print(f"\nTotal articles fetched: {len(articles)}")
+    logger.info("Fetched %d RBA articles", len(articles))
 
-    save_to_csv(articles)
-    print("Saved to rba_news_latest_100.csv (no header line).")
+    if save:
+        save_to_csv(articles)
+
+    return articles
+
+
+def main() -> None:
+    scrape_rba(save=True)
 
 
 if __name__ == "__main__":

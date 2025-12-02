@@ -14,13 +14,17 @@ import time
 from datetime import datetime
 from email.utils import parsedate_to_datetime
 from typing import List, Tuple
-
-import requests
 from xml.etree import ElementTree as ET
 
+import requests
+
+from logging_utils import setup_logger
+from paths import RBNZ_RESULTS
+
 FEED_URL = "https://www.rbnz.govt.nz/feeds/news"
-OUTPUT_FILE = "rbnz_latest_news.csv"
+OUTPUT_FILE = RBNZ_RESULTS
 MAX_ITEMS = 30
+logger = setup_logger("RBNZ")
 
 
 # -------------------- "Human-like" HTTP session -------------------- #
@@ -101,17 +105,17 @@ def fetch_feed_xml(session: requests.Session,
     for attempt in range(1, retries + 1):
         try:
             human_delay()  # small random delay before each attempt
-            print(f"Fetching feed (attempt {attempt}) from {url} ...")
+            logger.info("Fetching feed (attempt %d/%d) from %s", attempt, retries, url)
             resp = session.get(url, timeout=timeout)
             resp.raise_for_status()
-            print("  ✔ Feed fetched successfully")
+            logger.info("Feed fetched successfully")
             return resp.text
         except Exception as e:
-            print(f"  ✖ Attempt {attempt} failed: {e}")
+            logger.warning("Attempt %d failed: %s", attempt, e)
             if attempt == retries:
                 raise
             backoff = 2 ** (attempt - 1) + random.random()
-            print(f"  ↳ Sleeping {backoff:.1f}s before retry ...")
+            logger.info("Sleeping %.1fs before retry", backoff)
             time.sleep(backoff)
 
     raise RuntimeError("Unreachable: all retries exhausted but no exception raised.")
@@ -167,27 +171,37 @@ def save_to_csv(rows: List[Tuple[str, str, str]], path: str) -> None:
         writer = csv.writer(f)
         for date_str, title, url in rows:
             writer.writerow([date_str, title, url])
+    logger.info("Saved %d rows to %s", len(rows), path)
 
 
 # ----------------------------- Main ------------------------------- #
 
-def main() -> None:
+def scrape_rbnz(save: bool = True) -> List[Tuple[str, str, str]]:
     session = make_session()
-    xml_text = fetch_feed_xml(session, FEED_URL)
-    items = extract_items(xml_text)
+    try:
+        xml_text = fetch_feed_xml(session, FEED_URL)
+    except Exception as exc:
+        logger.error("Failed to fetch feed: %s", exc)
+        return []
 
+    items = extract_items(xml_text)
     if not items:
-        print("No items parsed from feed – nothing to save.")
-        return
+        logger.warning("No items parsed from feed – nothing to save.")
+        return []
 
     latest_30 = items[:MAX_ITEMS]
-    save_to_csv(latest_30, OUTPUT_FILE)
+    if save:
+        save_to_csv(latest_30, OUTPUT_FILE)
 
-    print(f"\nSaved {len(latest_30)} articles to {OUTPUT_FILE}")
-    print("First few lines:")
     for row in latest_30[:5]:
-        # Just a preview; file is already written
-        print(", ".join(row))
+        logger.debug("%s | %s | %s", *row)
+
+    logger.info("Prepared %d RBNZ articles", len(latest_30))
+    return latest_30
+
+
+def main() -> None:
+    scrape_rbnz(save=True)
 
 
 if __name__ == "__main__":
