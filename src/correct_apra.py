@@ -1,5 +1,7 @@
 import csv
 import re
+import time
+import random
 from datetime import datetime
 from urllib.parse import urljoin, urlparse
 
@@ -18,9 +20,58 @@ DATE_RE = re.compile(
 
 logger = setup_logger("APRA")
 
+# "Human-like" crawling parameters (tune as you like)
+MIN_DELAY = 1.0   # minimum delay between requests (seconds)
+MAX_DELAY = 3.0   # maximum delay between requests (seconds)
+MAX_RETRIES = 3   # number of attempts per URL
+BACKOFF_BASE = 1.5  # exponential backoff base
+
+
+def human_delay():
+    """
+    Sleep for a random amount of time between MIN_DELAY and MAX_DELAY
+    to mimic human browsing behaviour.
+    """
+    delay = random.uniform(MIN_DELAY, MAX_DELAY)
+    logger.debug("Sleeping for %.2f seconds before next request", delay)
+    time.sleep(delay)
+
+
+def fetch_with_retries(session: requests.Session, url: str, timeout: int = 30) -> requests.Response:
+    """
+    Fetch a URL with a few retries and jittered backoff, while inserting
+    small random delays to appear more human-like.
+    """
+    last_exc = None
+    for attempt in range(1, MAX_RETRIES + 1):
+        # Human-like pause before each attempt
+        human_delay()
+        try:
+            logger.debug("GET %s (attempt %d/%d)", url, attempt, MAX_RETRIES)
+            resp = session.get(url, timeout=timeout)
+            resp.raise_for_status()
+            return resp
+        except requests.RequestException as exc:
+            last_exc = exc
+            logger.warning(
+                "Attempt %d/%d failed for %s: %s",
+                attempt,
+                MAX_RETRIES,
+                url,
+                exc,
+            )
+            if attempt < MAX_RETRIES:
+                backoff = (BACKOFF_BASE ** attempt) + random.uniform(0, 0.5)
+                logger.debug("Backing off for %.2f seconds before retrying %s", backoff, url)
+                time.sleep(backoff)
+
+    logger.error("All %d attempts failed for %s: %s", MAX_RETRIES, url, last_exc)
+    # Let the caller decide how to handle the failure
+    raise last_exc
+
 
 def get_session() -> requests.Session:
-    """Create a session with a realistic User-Agent."""
+    """Create a session with a realistic User-Agent and common headers."""
     s = requests.Session()
     s.headers.update(
         {
@@ -28,7 +79,14 @@ def get_session() -> requests.Session:
                 "Mozilla/5.0 (X11; Linux x86_64; rv:125.0) "
                 "Gecko/20100101 Firefox/125.0"
             ),
-            "Accept-Language": "en",
+            "Accept": (
+                "text/html,application/xhtml+xml,application/xml;"
+                "q=0.9,image/avif,image/webp,*/*;q=0.8"
+            ),
+            "Accept-Language": "en-US,en;q=0.9",
+            "Connection": "keep-alive",
+            "DNT": "1",
+            # Let requests handle gzip/deflate by default; we don't need to force it
         }
     )
     return s
@@ -121,8 +179,7 @@ def main():
     # Fetch the listing page
     logger.info("Fetching listing page %s", LIST_URL)
     try:
-        resp = session.get(LIST_URL, timeout=30)
-        resp.raise_for_status()
+        resp = fetch_with_retries(session, LIST_URL, timeout=30)
     except requests.RequestException as exc:
         logger.error("Failed to fetch listing page: %s", exc)
         return
@@ -139,8 +196,7 @@ def main():
     for idx, (title, url) in enumerate(article_links, start=1):
         logger.info("(%d/%d) Fetching article: %s", idx, len(article_links), url)
         try:
-            r = session.get(url, timeout=30)
-            r.raise_for_status()
+            r = fetch_with_retries(session, url, timeout=30)
             raw_date = extract_date_from_article(r.text)
             iso_date = normalize_date_to_iso(raw_date)
         except requests.RequestException as e:

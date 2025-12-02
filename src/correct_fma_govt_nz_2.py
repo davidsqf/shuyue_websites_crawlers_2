@@ -1,5 +1,6 @@
 import csv
 import time
+import random
 from datetime import datetime
 
 import requests
@@ -23,9 +24,9 @@ def normalize_date_to_iso(date_str: str) -> str:
 
     # Try a few common formats
     formats = [
-        "%d %B %Y",   # 28 November 2025
-        "%d %b %Y",   # 28 Nov 2025
-        "%A %d %B %Y" # Friday 28 November 2025
+        "%d %B %Y",    # 28 November 2025
+        "%d %b %Y",    # 28 Nov 2025
+        "%A %d %B %Y", # Friday 28 November 2025
     ]
 
     for fmt in formats:
@@ -39,19 +40,56 @@ def normalize_date_to_iso(date_str: str) -> str:
     return ""
 
 
+def get_session() -> requests.Session:
+    """
+    Create a session that looks more like a real browser.
+    """
+    s = requests.Session()
+    s.headers.update(
+        {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/118.0.5993.88 Safari/537.36"
+            ),
+            "Accept": (
+                "text/html,application/xhtml+xml,application/xml;"
+                "q=0.9,image/avif,image/webp,*/*;q=0.8"
+            ),
+            "Accept-Language": "en-NZ,en-US;q=0.9,en;q=0.8",
+            "Connection": "keep-alive",
+        }
+    )
+    return s
+
+
+def human_delay(page_num: int) -> None:
+    """
+    Sleep for a random 'think time' to look more human.
+
+    - Short random pause between every page.
+    - Occasionally a slightly longer pause every few pages.
+    """
+    base = random.uniform(0.1, 1.0)  # normal think time
+    extra = 0.0
+
+    # Every 5 pages, pretend we took a slightly longer break
+    if page_num > 0 and page_num % 5 == 0:
+        extra = random.uniform(0.1, 1.0)
+
+    delay = base + extra
+    logger.info("Sleeping for %.2f seconds before fetching next page", delay)
+    time.sleep(delay)
+
+
 def fetch_media_releases():
     base_url = "https://www.fma.govt.nz"
     url = "https://www.fma.govt.nz/news/all-releases/media-releases/"
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/118.0.5993.88 Safari/537.36"
-        )
-    }
 
+    session = get_session()
     releases = []
     visited_urls = set()
+    page_num = 0
 
     while True:
         if url in visited_urls:
@@ -59,13 +97,17 @@ def fetch_media_releases():
             break
 
         visited_urls.add(url)
-        logger.info("Fetching page: %s", url)
+        page_num += 1
 
-        resp = requests.get(url, headers=headers, timeout=30)
+        # Human-like delay before each request
+        human_delay(page_num)
+
+        logger.info("Fetching page %d: %s", page_num, url)
+        resp = session.get(url, timeout=30)
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
 
-        # Extract each article entry
+        # Extract each article entry (business logic unchanged)
         for item in soup.find_all("li", class_="search-results-semantic__result-item"):
             h3 = item.find("h3")
             a = h3.find("a") if h3 else None
@@ -76,13 +118,15 @@ def fetch_media_releases():
             date_text = date_tag.get_text(strip=True) if date_tag else None
 
             if title and article_url and date_text:
-                releases.append({
-                    "title": title,
-                    "url": article_url,
-                    "date": date_text
-                })
+                releases.append(
+                    {
+                        "title": title,
+                        "url": article_url,
+                        "date": date_text,
+                    }
+                )
 
-        # Detect next page
+        # Detect next page (business logic unchanged)
         next_link = soup.find("a", class_="next page-link")
         if not next_link:
             break
@@ -93,9 +137,6 @@ def fetch_media_releases():
 
         # Build next URL
         url = urljoin(base_url, next_href)
-
-        # Prevent hammering server
-        time.sleep(0.5)
 
     return releases
 
