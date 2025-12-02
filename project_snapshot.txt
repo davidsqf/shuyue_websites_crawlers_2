@@ -1,0 +1,1893 @@
+# Project snapshot generated for reconstruction
+# Each file is delimited by markers; paths are relative to the project root.
+
+=== FILE START ===
+path: .DS_Store
+encoding: base64
+---
+AAAAAUJ1ZDEAABAAAAAIAAAAEAAAAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAIAAAABAAAQAHNwYmxvYgAAALhicAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAMAcwByAGNid3NwYmxvYgAAALhicGxpc3QwMNYBAgMEBQYHCAcICwhdU2hvd1N0YXR1c0JhcltTaG93VG9vbGJhcltTaG93VGFiVmlld18QFENvbnRhaW5lclNob3dTaWRlYmFyXFdpbmRvd0JvdW5kc1tTaG93U2lkZWJhcggJCAlfEBh7ezI5NiwgMzg0fSwgezkyMCwgNDY0fX0JCBUjLztSX2tsbW5vigAAAAAAAAEBAAAAAAAAAA0AAAAAAAAAAAAAAAAAAACLAAAAAwBzAHIAY3ZTcm5sb25nAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAACAAAAABAAAAQAAAAAEAAACAAAAAAQAAAQAAAAABAAACAAAAAAEAAAQAAAAAAAAAAAEAABAAAAAAAQAAIAAAAAABAABAAAAAAAEAAIAAAAAAAQABAAAAAAABAAIAAAAAAAEABAAAAAAAAQAIAAAAAAABABAAAAAAAAEAIAAAAAAAAQBAAAAAAAABAIAAAAAAAAEBAAAAAAAAAQIAAAAAAAABBAAAAAAAAAEIAAAAAAAAARAAAAAAAAABIAAAAAAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAEAsAAABFAAABCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBERTREIAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAIAAAAGAAAAAAAAAAAQAAAIAAAAAAAAAAAQAAAgAAAAABAAAEAAAAAAIAAAgAAAAYAAAAAAAAAAABAAAgAAAAAAEAAEAAAAAAAQAAgAAAAAABAAEAAAAAAAEAAgAAAAAAAQAEAAAAAAABAAgAAAAAAAEAEAAAAAAAAQAgAAAAAAABAEAAAAAAAAEAgAAAAAAAAQEAAAAAAAABAgAAAAAAAAEEAAAAAAAAAQgAAAAAAAABEAAAAAAAAAEgAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\n=== FILE END ===
+
+=== FILE START ===
+path: README.md
+encoding: utf-8
+---
+## Shuyue Website Crawlers – Quick Start (Windows and macOS)
+
+This project scrapes four public sources (APRA, FMA, RBNZ, RBA) and serves the results on a small website. Each source page auto-refreshes, and you can manually refresh a single source from its page.
+
+### 1) Prerequisites
+- Python 3.10 or newer installed.
+- Internet access (scrapers fetch public websites).
+- A terminal:
+  - Windows: PowerShell.
+  - macOS: Terminal.
+
+### 2) Get the code
+If you already have the folder, open a terminal inside it. Otherwise:
+- **Windows (PowerShell):**
+  ```powershell
+  git clone <this-repo-url> shuyue_websites_crawlers_2
+  cd shuyue_websites_crawlers_2
+  ```
+- **macOS (Terminal):**
+  ```bash
+  git clone <this-repo-url> shuyue_websites_crawlers_2
+  cd shuyue_websites_crawlers_2
+  ```
+
+### 3) Create and activate a virtual environment (no aliases assumed)
+- **Windows (PowerShell):**
+  ```powershell
+  py -3 -m venv .venv
+  .\.venv\Scripts\activate
+  ```
+- **macOS (Terminal):**
+  ```bash
+  python3 -m venv .venv
+  source .venv/bin/activate
+  ```
+After activation your prompt should start with `(.venv)`.
+
+### 4) Install dependencies
+- **Windows (PowerShell):**
+  ```powershell
+  python -m pip install --upgrade pip
+  python -m pip install -r requirements.txt
+  ```
+- **macOS (Terminal):**
+  ```bash
+  python3 -m pip install --upgrade pip
+  python3 -m pip install -r requirements.txt
+  ```
+If you see SSL/proxy errors, add `--trusted-host pypi.org --trusted-host files.pythonhosted.org` to the install command.
+
+### 5) Run the server
+- **Windows (PowerShell):**
+  ```powershell
+  python src\web_server.py --host 0.0.0.0 --port 8000 --refresh-seconds 3600 --scrape-interval 3600
+  ```
+- **macOS (Terminal):**
+  ```bash
+  python3 src/web_server.py --host 0.0.0.0 --port 8000 --refresh-seconds 3600 --scrape-interval 3600
+  ```
+What the options mean:
+- `--host 0.0.0.0` lets other machines on your LAN open the site. Use your LAN IP from step 6.
+- `--port` is the port number (change if 8000 is taken).
+- `--refresh-seconds` controls how often the webpage itself reloads.
+- `--scrape-interval` controls how often the scrapers re-run in the background.
+The two timers are independent.
+
+### 6) Find your LAN IP
+- **Windows:** run `ipconfig` in PowerShell. Look for “IPv4 Address” under your active network adapter (example: `192.168.1.23`).
+- **macOS:** run `ipconfig getifaddr en0` (Wi‑Fi) or `ipconfig getifaddr en1` (Ethernet). Example output: `192.168.1.23`.
+Other machines on the same network can open `http://<your-LAN-IP>:8000/` with that address.
+
+### 7) Use the site
+- Open `http://localhost:8000/` (or `http://<your-LAN-IP>:8000/` from another machine).
+- Click a source (APRA/FMA/RBNZ/RBA) to see its table.
+- On each source page:
+  - **Refresh now**: manually triggers that crawler in the background.
+  - **Homepage**: returns to the main list.
+- Data files are stored in `data/` automatically.
+
+### 8) Manual scraping (optional)
+- **Windows (PowerShell):**
+  ```powershell
+  python src\correct_apra.py
+  python src\correct_fma_govt_nz_2.py
+  python src\correct_rbnz_1.py
+  python src\correct_rba_news_3.py
+  ```
+- **macOS (Terminal):**
+  ```bash
+  python3 src/correct_apra.py
+  python3 src/correct_fma_govt_nz_2.py
+  python3 src/correct_rbnz_1.py
+  python3 src/correct_rba_news_3.py
+  ```
+Normally the web server handles scraping for you.
+
+### 9) Common issues and fixes
+- **Port already in use**: pick another, e.g. `--port 8080`, then open `http://localhost:8080/`.
+- **Nothing loads in browser**: check the server terminal for errors; ensure the URL/port is correct and your firewall allows the port.
+- **Pip install fails**: confirm the virtual environment is active (`(.venv)`), upgrade pip, and add `--trusted-host` if behind a proxy.
+- **Scrapers show errors**: temporary network or site changes can cause this; the server keeps running and serves any existing data. Try “Refresh now” later.
+- **Deactivate the virtual environment**: run `deactivate`.
+
+### 10) Stop the server
+Press `Ctrl+C` in the terminal where the server is running.
+
+### 11) Where things live
+- Code: `src/`
+- Generated data: `data/` (auto-created)
+- Server entry point: `src/web_server.py`
+
+You are ready—start the server, open the URL, and use the Refresh buttons when needed.***
+\n=== FILE END ===
+
+=== FILE START ===
+path: requirements.txt
+encoding: utf-8
+---
+beautifulsoup4==4.14.3
+certifi==2025.11.12
+charset-normalizer==3.4.4
+greenlet==3.2.4
+idna==3.11
+lxml==6.0.2
+playwright==1.56.0
+pyee==13.0.0
+requests==2.32.5
+soupsieve==2.8
+typing_extensions==4.15.0
+urllib3==2.5.0
+\n=== FILE END ===
+
+=== FILE START ===
+path: run_scrapers.sh
+encoding: utf-8
+---
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PYTHON_BIN="${PYTHON_BIN:-python3}"
+
+run_job() {
+  local name="$1"
+  local script="$2"
+
+  (
+    cd "$ROOT"
+    "$PYTHON_BIN" -u "$script"
+  ) | sed -e "s/^/[$name] /"
+}
+
+declare -a pids=()
+declare -a names=()
+echo "[META] launching APRA scraper"
+run_job "APRA" "src/correct_apra.py" &
+pids+=($!)
+names+=("APRA")
+echo "[META] launching RBA scraper"
+run_job "RBA" "src/correct_rba_news_3.py" &
+pids+=($!)
+names+=("RBA")
+echo "[META] launching FMA scraper"
+run_job "FMA" "src/correct_fma_govt_nz_2.py" &
+pids+=($!)
+names+=("FMA")
+echo "[META] launching RBNZ scraper"
+run_job "RBNZ" "src/correct_rbnz_1.py" &
+pids+=($!)
+names+=("RBNZ")
+
+status=0
+for idx in "${!pids[@]}"; do
+  pid="${pids[$idx]}"
+  name="${names[$idx]}"
+  if ! wait "$pid"; then
+    exit_code=$?
+    status=1
+    echo "[META] ${name} scraper failed (exit ${exit_code})"
+  fi
+done
+
+if [ "$status" -eq 0 ]; then
+  echo "[META] all scrapers finished successfully"
+else
+  echo "[META] one or more scrapers failed"
+fi
+
+exit $status
+\n=== FILE END ===
+
+=== FILE START ===
+path: src/correct_apra.py
+encoding: utf-8
+---
+import csv
+import re
+import time
+import random
+from datetime import datetime
+from typing import List, Tuple
+from urllib.parse import urljoin, urlparse
+
+import requests
+from bs4 import BeautifulSoup
+
+from logging_utils import setup_logger
+from paths import APRA_RESULTS
+
+BASE_URL = "https://www.apra.gov.au"
+LIST_URL = "https://www.apra.gov.au/news-and-publications/39"
+
+# Matches things like "Friday 28 November 2025" or "28 November 2025"
+DATE_RE = re.compile(
+    r"(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)?\s*\d{1,2}\s+[A-Za-z]+\s+\d{4}"
+)
+
+logger = setup_logger("APRA")
+
+# "Human-like" crawling parameters (tune as you like)
+MIN_DELAY = 1.0   # minimum delay between requests (seconds)
+MAX_DELAY = 3.0   # maximum delay between requests (seconds)
+MAX_RETRIES = 3   # number of attempts per URL
+BACKOFF_BASE = 1.5  # exponential backoff base
+
+
+def human_delay():
+    """
+    Sleep for a random amount of time between MIN_DELAY and MAX_DELAY
+    to mimic human browsing behaviour.
+    """
+    delay = random.uniform(MIN_DELAY, MAX_DELAY)
+    logger.debug("Sleeping for %.2f seconds before next request", delay)
+    time.sleep(delay)
+
+
+def fetch_with_retries(session: requests.Session, url: str, timeout: int = 30) -> requests.Response:
+    """
+    Fetch a URL with a few retries and jittered backoff, while inserting
+    small random delays to appear more human-like.
+    """
+    last_exc = None
+    for attempt in range(1, MAX_RETRIES + 1):
+        # Human-like pause before each attempt
+        human_delay()
+        try:
+            logger.debug("GET %s (attempt %d/%d)", url, attempt, MAX_RETRIES)
+            resp = session.get(url, timeout=timeout)
+            resp.raise_for_status()
+            return resp
+        except requests.RequestException as exc:
+            last_exc = exc
+            logger.warning(
+                "Attempt %d/%d failed for %s: %s",
+                attempt,
+                MAX_RETRIES,
+                url,
+                exc,
+            )
+            if attempt < MAX_RETRIES:
+                backoff = (BACKOFF_BASE ** attempt) + random.uniform(0, 0.5)
+                logger.debug("Backing off for %.2f seconds before retrying %s", backoff, url)
+                time.sleep(backoff)
+
+    logger.error("All %d attempts failed for %s: %s", MAX_RETRIES, url, last_exc)
+    # Let the caller decide how to handle the failure
+    raise last_exc
+
+
+def get_session() -> requests.Session:
+    """Create a session with a realistic User-Agent and common headers."""
+    s = requests.Session()
+    s.headers.update(
+        {
+            "User-Agent": (
+                "Mozilla/5.0 (X11; Linux x86_64; rv:125.0) "
+                "Gecko/20100101 Firefox/125.0"
+            ),
+            "Accept": (
+                "text/html,application/xhtml+xml,application/xml;"
+                "q=0.9,image/avif,image/webp,*/*;q=0.8"
+            ),
+            "Accept-Language": "en-US,en;q=0.9",
+            "Connection": "keep-alive",
+            "DNT": "1",
+            # Let requests handle gzip/deflate by default; we don't need to force it
+        }
+    )
+    return s
+
+
+def extract_article_links(html: str):
+    """
+    From the listing page HTML, return a list of (title, url) tuples
+    for article links.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    links = []
+    seen = set()
+
+    for a in soup.find_all("a", href=True):
+        href = a["href"].strip()
+        if not href:
+            continue
+
+        # Normalise relative URLs to absolute
+        url = urljoin(BASE_URL, href)
+        parsed = urlparse(url)
+        path = parsed.path
+
+        # Only keep clean article URLs like /news-and-publications/some-slug
+        if not path.startswith("/news-and-publications/"):
+            continue
+        if "?" in parsed.query or "?" in url or "#" in url:
+            # Skip filter/pagination/tab links
+            continue
+
+        title = a.get_text(strip=True)
+        if not title:
+            continue
+
+        if url in seen:
+            continue
+
+        seen.add(url)
+        links.append((title, url))
+
+    return links
+
+
+def extract_date_from_article(html: str) -> str:
+    """Try to pull a human-readable date from an article page."""
+    soup = BeautifulSoup(html, "html.parser")
+
+    # 1. Prefer an explicit <time> tag if present
+    time_tag = soup.find("time")
+    if time_tag:
+        text = time_tag.get_text(strip=True)
+        if text:
+            return text
+
+    # 2. Fallback: regex over the full text content
+    text = " ".join(soup.get_text(separator=" ").split())
+    m = DATE_RE.search(text)
+    if m:
+        return m.group(0)
+
+    return ""
+
+
+def normalize_date_to_iso(date_str: str) -> str:
+    """
+    Convert a human-readable date like 'Friday 28 November 2025'
+    or '28 November 2025' to 'YYYY-MM-DD'. Returns '' on failure.
+    """
+    if not date_str:
+        return ""
+
+    date_str = " ".join(date_str.split())  # normalize spaces
+
+    # Try with weekday first, then without
+    for fmt in ("%A %d %B %Y", "%d %B %Y"):
+        try:
+            dt = datetime.strptime(date_str, fmt)
+            return dt.strftime("%Y-%m-%d")
+        except ValueError:
+            continue
+
+    # If parsing fails, return empty string (keep CSV structure simple)
+    return ""
+
+
+def scrape_apra(save: bool = True) -> List[Tuple[str, str, str]]:
+    """
+    Crawl the APRA news listings and return a list of
+    (iso_date, title, url) tuples. When `save` is True, the results
+    overwrite the APRA_RESULTS CSV file.
+    """
+    session = get_session()
+
+    logger.info("Fetching listing page %s", LIST_URL)
+    try:
+        resp = fetch_with_retries(session, LIST_URL, timeout=30)
+    except requests.RequestException as exc:
+        logger.error("Failed to fetch listing page: %s", exc)
+        return []
+
+    article_links = extract_article_links(resp.text)
+    logger.info("Found %d candidate article links", len(article_links))
+
+    if not article_links:
+        logger.warning("No article links were found on the listing page.")
+        return []
+
+    rows: List[Tuple[str, str, str]] = []
+
+    for idx, (title, url) in enumerate(article_links, start=1):
+        logger.info("(%d/%d) Fetching article: %s", idx, len(article_links), url)
+        try:
+            r = fetch_with_retries(session, url, timeout=30)
+            raw_date = extract_date_from_article(r.text)
+            iso_date = normalize_date_to_iso(raw_date)
+        except requests.RequestException as exc:
+            logger.error("Failed to fetch article %s: %s", url, exc)
+            raw_date = ""
+            iso_date = ""
+
+        rows.append((iso_date, title, url))
+        logger.debug("%s | %s | %s", iso_date, title, url)
+
+    if save:
+        with open(APRA_RESULTS, "w", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerows(rows)
+        logger.info("Saved %d articles to %s", len(rows), APRA_RESULTS)
+
+    return rows
+
+
+def main():
+    scrape_apra(save=True)
+
+
+if __name__ == "__main__":
+    main()
+\n=== FILE END ===
+
+=== FILE START ===
+path: src/correct_fma_govt_nz_2.py
+encoding: utf-8
+---
+import csv
+import time
+import random
+from datetime import datetime
+from urllib.parse import urljoin
+
+import requests
+from bs4 import BeautifulSoup
+
+from logging_utils import setup_logger
+from paths import FMA_RESULTS
+
+RESULTS_CSV = FMA_RESULTS
+logger = setup_logger("FMA")
+
+
+def normalize_date_to_iso(date_str: str) -> str:
+    """
+    Convert a human-readable date like '28 November 2025'
+    (or similar) to 'YYYY-MM-DD'. Returns '' on failure.
+    """
+    if not date_str:
+        return ""
+
+    date_str = " ".join(date_str.split())  # normalize spaces
+
+    # Try a few common formats
+    formats = [
+        "%d %B %Y",    # 28 November 2025
+        "%d %b %Y",    # 28 Nov 2025
+        "%A %d %B %Y", # Friday 28 November 2025
+    ]
+
+    for fmt in formats:
+        try:
+            dt = datetime.strptime(date_str, fmt)
+            return dt.strftime("%Y-%m-%d")
+        except ValueError:
+            continue
+
+    # If parsing fails, return empty string
+    return ""
+
+
+def get_session() -> requests.Session:
+    """
+    Create a session that looks more like a real browser.
+    """
+    s = requests.Session()
+    s.headers.update(
+        {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/118.0.5993.88 Safari/537.36"
+            ),
+            "Accept": (
+                "text/html,application/xhtml+xml,application/xml;"
+                "q=0.9,image/avif,image/webp,*/*;q=0.8"
+            ),
+            "Accept-Language": "en-NZ,en-US;q=0.9,en;q=0.8",
+            "Connection": "keep-alive",
+        }
+    )
+    return s
+
+
+def human_delay(page_num: int) -> None:
+    """
+    Sleep for a random 'think time' to look more human.
+
+    - Short random pause between every page.
+    - Occasionally a slightly longer pause every few pages.
+    """
+    base = random.uniform(0.1, 1.0)  # normal think time
+    extra = 0.0
+
+    # Every 5 pages, pretend we took a slightly longer break
+    if page_num > 0 and page_num % 5 == 0:
+        extra = random.uniform(0.1, 1.0)
+
+    delay = base + extra
+    logger.info("Sleeping for %.2f seconds before fetching next page", delay)
+    time.sleep(delay)
+
+
+def fetch_media_releases():
+    base_url = "https://www.fma.govt.nz"
+    url = "https://www.fma.govt.nz/news/all-releases/media-releases/"
+
+    session = get_session()
+    releases = []
+    visited_urls = set()
+    page_num = 0
+
+    while True:
+        if url in visited_urls:
+            logger.warning("Loop detected, stopping at %s", url)
+            break
+
+        visited_urls.add(url)
+        page_num += 1
+
+        # Human-like delay before each request
+        human_delay(page_num)
+
+        logger.info("Fetching page %d: %s", page_num, url)
+        resp = session.get(url, timeout=30)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+
+        # Extract each article entry (business logic unchanged)
+        for item in soup.find_all("li", class_="search-results-semantic__result-item"):
+            h3 = item.find("h3")
+            a = h3.find("a") if h3 else None
+            title = a.get_text(strip=True) if a else None
+            article_url = urljoin(base_url, a["href"]) if a else None
+
+            date_tag = item.find("span", class_="search-results-semantic__date")
+            date_text = date_tag.get_text(strip=True) if date_tag else None
+
+            if title and article_url and date_text:
+                releases.append(
+                    {
+                        "title": title,
+                        "url": article_url,
+                        "date": date_text,
+                    }
+                )
+
+        # Detect next page (business logic unchanged)
+        next_link = soup.find("a", class_="next page-link")
+        if not next_link:
+            break
+
+        next_href = next_link.get("href")
+        if not next_href:
+            break
+
+        # Build next URL
+        url = urljoin(base_url, next_href)
+
+    return releases
+
+
+def save_results(releases, output_path=RESULTS_CSV):
+    # Write to a dedicated results file in (yyyy-mm-dd, title, url) format
+    with open(output_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        for r in releases:
+            iso_date = normalize_date_to_iso(r["date"])
+            writer.writerow([iso_date, r["title"], r["url"]])
+
+    logger.info("Saved %d articles to %s", len(releases), output_path)
+
+
+def scrape_fma(save: bool = True):
+    logger.info("Starting FMA media releases crawl")
+    releases = fetch_media_releases()
+    logger.info("Total releases scraped: %d", len(releases))
+
+    for r in releases[:10]:
+        iso_date = normalize_date_to_iso(r["date"])
+        logger.debug("%s | %s | %s", iso_date, r["title"], r["url"])
+
+    if save:
+        save_results(releases)
+
+    return releases
+
+
+if __name__ == "__main__":
+    scrape_fma(save=True)
+\n=== FILE END ===
+
+=== FILE START ===
+path: src/correct_rba_news_3.py
+encoding: utf-8
+---
+#!/usr/bin/env python3
+"""
+Fetch latest 100 RBA news items from https://www.rba.gov.au/news/
+
+Output:
+  - Prints lines:  YYYY-MM-DD,title,url
+  - Writes file:   rba_news_latest_100.csv (no header line, same format)
+"""
+
+from __future__ import annotations
+
+import csv
+import re
+from datetime import datetime
+from typing import List, Dict, Any
+from urllib.parse import urljoin
+
+import requests
+from bs4 import BeautifulSoup
+from bs4.element import NavigableString, Tag
+
+from logging_utils import setup_logger
+from paths import RBA_RESULTS
+
+BASE_URL = "https://www.rba.gov.au"
+NEWS_URL = f"{BASE_URL}/news/"
+
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/119.0.0.0 Safari/537.36"
+    )
+}
+
+logger = setup_logger("RBA")
+OUTPUT_FILE = RBA_RESULTS
+
+MONTH_NAMES = (
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+)
+
+
+# --------------------------------------------------------------------------- #
+# Date helpers
+# --------------------------------------------------------------------------- #
+
+def looks_like_date(text: str) -> bool:
+    """
+    Detect lines like:
+      '2 December 2025 2.30 pm AEDT'
+      '31 October 2025 11.30 am AEDT'
+    and ignore sentences that just mention 'October 2025' in passing.
+    """
+    text = text.strip().replace("\xa0", " ")
+    if not text:
+        return False
+
+    # Must start with day + month
+    if not re.match(r"^\d{1,2}\s+[A-Za-z]+", text):
+        return False
+
+    # Must contain a 4-digit year starting with 20
+    if not re.search(r"\b20\d{2}\b", text):
+        return False
+
+    return True
+
+
+def parse_date_iso(text: str) -> str:
+    """
+    Given something like '2 December 2025 2.30 pm AEDT',
+    return '2025-12-02'.
+    """
+    text = " ".join(text.replace("\xa0", " ").split())
+    m = re.search(r"(\d{1,2}\s+[A-Za-z]+\s+20\d{2})", text)
+    if not m:
+        return ""
+
+    date_part = m.group(1)  # e.g. '2 December 2025'
+    dt = datetime.strptime(date_part, "%d %B %Y")
+    return dt.strftime("%Y-%m-%d")
+
+
+# --------------------------------------------------------------------------- #
+# HTML parsing
+# --------------------------------------------------------------------------- #
+
+def fetch_news_page() -> str:
+    logger.info("Fetching %s", NEWS_URL)
+    resp = requests.get(NEWS_URL, headers=HEADERS, timeout=30)
+    resp.raise_for_status()
+    return resp.text
+
+
+def find_heading_link(node: NavigableString) -> Tag | None:
+    """
+    From a date text node, walk backwards through the document and find
+    the nearest <a> that lives inside an <h2>/<h3>/<h4> and is *not*
+    an 'Audio' or 'Q&A Transcript' auxiliary link.
+    """
+    curr: Tag | NavigableString = node
+
+    while True:
+        a = curr.find_previous("a")
+        if a is None:
+            return None
+
+        text = " ".join(a.stripped_strings)
+        if not text:
+            curr = a
+            continue
+
+        lower = text.strip().lower()
+        # Skip auxiliary links that appear between the main title and date
+        if lower in {"audio", "q&a transcript", "download", "subscribe"}:
+            curr = a
+            continue
+
+        heading = a.find_parent(["h2", "h3", "h4"])
+        if not heading:
+            curr = a
+            continue
+
+        return a
+
+
+def parse_news(html: str, limit: int = 100) -> List[Dict[str, Any]]:
+    """
+    Parse the RBA /news/ HTML and extract up to `limit` items.
+
+    Strategy:
+      - Walk all text nodes in the main content area.
+      - For any text node that looks like a date, find the nearest
+        preceding heading link (in an <h2>/<h3>/<h4>).
+      - Use that link as the article title + URL.
+    """
+    soup = BeautifulSoup(html, "lxml")
+
+    content = (
+        soup.find("main")
+        or soup.find(id="content")
+        or soup.body
+        or soup
+    )
+
+    results: List[Dict[str, Any]] = []
+    seen: set[tuple[str, str, str]] = set()
+
+    for text_node in content.find_all(string=True):
+        if not isinstance(text_node, NavigableString):
+            continue
+
+        raw = str(text_node)
+        t = " ".join(raw.replace("\xa0", " ").split())
+        if not looks_like_date(t):
+            continue
+
+        iso_date = parse_date_iso(t)
+        if not iso_date:
+            # If parsing somehow fails, skip this one
+            continue
+
+        link = find_heading_link(text_node)
+        if link is None:
+            continue
+
+        href = link.get("href")
+        if not href:
+            continue
+
+        title = " ".join(link.stripped_strings)
+        url = urljoin(BASE_URL, href)
+
+        key = (iso_date, title, url)
+        if key in seen:
+            continue
+        seen.add(key)
+
+        results.append(
+            {
+                "date": iso_date,
+                "title": title,
+                "url": url,
+            }
+        )
+
+        if len(results) >= limit:
+            break
+
+    return results
+
+
+# --------------------------------------------------------------------------- #
+# Output
+# --------------------------------------------------------------------------- #
+
+def save_to_csv(rows: List[Dict[str, Any]], path: str = OUTPUT_FILE) -> None:
+    """
+    Write rows to CSV with NO header line, in the order:
+      date,title,url
+    """
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        for row in rows:
+            writer.writerow([row["date"], row["title"], row["url"]])
+    logger.info("Saved %d rows to %s", len(rows), path)
+
+
+def scrape_rba(save: bool = True) -> List[Dict[str, Any]]:
+    html = fetch_news_page()
+    articles = parse_news(html, limit=100)
+
+    for art in articles[:5]:
+        logger.debug("%s | %s | %s", art["date"], art["title"], art["url"])
+
+    logger.info("Fetched %d RBA articles", len(articles))
+
+    if save:
+        save_to_csv(articles)
+
+    return articles
+
+
+def main() -> None:
+    scrape_rba(save=True)
+
+
+if __name__ == "__main__":
+    main()
+\n=== FILE END ===
+
+=== FILE START ===
+path: src/correct_rbnz_1.py
+encoding: utf-8
+---
+#!/usr/bin/env python3
+"""
+Fetch the latest 30 RBNZ news items and save as CSV lines:
+
+    YYYY-MM-DD,title,url
+
+Source: official RBNZ news RSS feed:
+  - https://www.rbnz.govt.nz/feeds/news
+"""
+
+import csv
+import random
+import time
+from datetime import datetime
+from email.utils import parsedate_to_datetime
+from typing import List, Tuple
+from xml.etree import ElementTree as ET
+
+import requests
+
+from logging_utils import setup_logger
+from paths import RBNZ_RESULTS
+
+FEED_URL = "https://www.rbnz.govt.nz/feeds/news"
+OUTPUT_FILE = RBNZ_RESULTS
+MAX_ITEMS = 30
+logger = setup_logger("RBNZ")
+
+
+# -------------------- "Human-like" HTTP session -------------------- #
+
+def make_session() -> requests.Session:
+    """Create a session with realistic browser-like headers."""
+    s = requests.Session()
+    s.headers.update({
+        "User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/120.0.0.0 Safari/537.36"
+        ),
+        "Accept": (
+            "text/html,application/xhtml+xml,application/xml;q=0.9,"
+            "image/avif,image/webp,*/*;q=0.8"
+        ),
+        "Accept-Language": "en-NZ,en;q=0.9",
+        "Referer": "https://www.rbnz.govt.nz/news-and-events/news",
+        "Connection": "keep-alive",
+    })
+    return s
+
+
+def human_delay(base: float = 0.8, jitter: float = 0.7) -> None:
+    """Sleep for a slightly random time to look less bot-like."""
+    delay = base + random.random() * jitter
+    time.sleep(delay)
+
+
+# ------------------------- Date handling --------------------------- #
+
+def parse_date_to_iso(date_str: str) -> str:
+    """
+    Convert various RSS/Atom date formats to YYYY-MM-DD.
+    Returns '' on failure.
+    """
+    if not date_str:
+        return ""
+
+    date_str = date_str.strip()
+
+    # 1) RFC-822 style (typical RSS <pubDate>)
+    try:
+        dt = parsedate_to_datetime(date_str)
+        return dt.date().isoformat()
+    except Exception:
+        pass
+
+    # 2) ISO 8601 (typical Atom <updated>/<published>)
+    try:
+        cleaned = date_str.replace("Z", "+00:00")
+        dt = datetime.fromisoformat(cleaned)
+        return dt.date().isoformat()
+    except Exception:
+        pass
+
+    # 3) Fallback: "6 December 2012" or "6 Dec 2012"
+    for fmt in ("%d %B %Y", "%d %b %Y"):
+        try:
+            dt = datetime.strptime(date_str, fmt)
+            return dt.date().isoformat()
+        except Exception:
+            continue
+
+    return ""
+
+
+# -------------------- Fetch & parse RSS/Atom ---------------------- #
+
+def fetch_feed_xml(session: requests.Session,
+                   url: str,
+                   retries: int = 3,
+                   timeout: int = 15) -> str:
+    """
+    Fetch the feed XML with a couple of retries and backoff.
+    """
+    for attempt in range(1, retries + 1):
+        try:
+            human_delay()  # small random delay before each attempt
+            logger.info("Fetching feed (attempt %d/%d) from %s", attempt, retries, url)
+            resp = session.get(url, timeout=timeout)
+            resp.raise_for_status()
+            logger.info("Feed fetched successfully")
+            return resp.text
+        except Exception as e:
+            logger.warning("Attempt %d failed: %s", attempt, e)
+            if attempt == retries:
+                raise
+            backoff = 2 ** (attempt - 1) + random.random()
+            logger.info("Sleeping %.1fs before retry", backoff)
+            time.sleep(backoff)
+
+    raise RuntimeError("Unreachable: all retries exhausted but no exception raised.")
+
+
+def extract_items(xml_text: str) -> List[Tuple[str, str, str]]:
+    """
+    Extract (iso_date, title, link) from RSS or Atom XML.
+    """
+    root = ET.fromstring(xml_text)
+    items: List[Tuple[str, str, str]] = []
+
+    # --- Try generic RSS 2.0: any <item> elements anywhere ---
+    for node in root.findall(".//item"):
+        title = (node.findtext("title") or "").strip()
+        link = (node.findtext("link") or "").strip()
+        pub_date_raw = (node.findtext("pubDate") or "").strip()
+        iso_date = parse_date_to_iso(pub_date_raw)
+        items.append((iso_date, title, link))
+
+    # --- Fallback: Atom feed with <entry> elements ---
+    if not items:
+        ns = {"atom": "http://www.w3.org/2005/Atom"}
+        for entry in root.findall("atom:entry", ns):
+            title = (entry.findtext("atom:title", default="", namespaces=ns)
+                     or "").strip()
+            link_el = entry.find("atom:link", ns)
+            link = ""
+            if link_el is not None:
+                link = link_el.attrib.get("href", "").strip()
+            pub_raw = (
+                entry.findtext("atom:published", default="", namespaces=ns)
+                or entry.findtext("atom:updated", default="", namespaces=ns)
+                or ""
+            ).strip()
+            iso_date = parse_date_to_iso(pub_raw)
+            items.append((iso_date, title, link))
+
+    # Sort by date descending if we have dates; undated items go last
+    items.sort(key=lambda t: (t[0] or ""), reverse=True)
+    return items
+
+
+# --------------------------- CSV output --------------------------- #
+
+def save_to_csv(rows: List[Tuple[str, str, str]], path: str) -> None:
+    """
+    Save rows as CSV *without* a header, lines like:
+        2025-11-28,Some title,https://...
+    The csv.writer will handle quoting if titles contain commas.
+    """
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        for date_str, title, url in rows:
+            writer.writerow([date_str, title, url])
+    logger.info("Saved %d rows to %s", len(rows), path)
+
+
+# ----------------------------- Main ------------------------------- #
+
+def scrape_rbnz(save: bool = True) -> List[Tuple[str, str, str]]:
+    session = make_session()
+    try:
+        xml_text = fetch_feed_xml(session, FEED_URL)
+    except Exception as exc:
+        logger.error("Failed to fetch feed: %s", exc)
+        return []
+
+    items = extract_items(xml_text)
+    if not items:
+        logger.warning("No items parsed from feed – nothing to save.")
+        return []
+
+    latest_30 = items[:MAX_ITEMS]
+    if save:
+        save_to_csv(latest_30, OUTPUT_FILE)
+
+    for row in latest_30[:5]:
+        logger.debug("%s | %s | %s", *row)
+
+    logger.info("Prepared %d RBNZ articles", len(latest_30))
+    return latest_30
+
+
+def main() -> None:
+    scrape_rbnz(save=True)
+
+
+if __name__ == "__main__":
+    main()
+\n=== FILE END ===
+
+=== FILE START ===
+path: src/deprecated_correct_rba_3.py
+encoding: utf-8
+---
+#!/usr/bin/env python3
+"""
+Scrape RBA:
+  • Media Releases
+  • Speeches
+  • Research (RDPs)
+
+For each article, append a row to results.csv in the format:
+    (yyyy-mm-dd, title, url)
+"""
+from __future__ import annotations
+import csv
+import re
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, MINYEAR
+from pathlib import Path
+from typing import Iterable, List, Tuple
+from urllib.parse import urljoin, urlparse
+
+import requests
+from bs4 import BeautifulSoup
+from logging_utils import setup_logger
+
+# --------------------------------------------------------------------------- #
+# CONFIG
+# --------------------------------------------------------------------------- #
+HEADERS = {"User-Agent": (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/119.0.0.0 Safari/537.36")}
+SEEDS = {
+    # human-readable entry points
+    "media":  "https://www.rba.gov.au/media-releases/",
+    "speech": "https://www.rba.gov.au/speeches/",
+    "research_root": "https://www.rba.gov.au/research/",
+}
+# year-index pages for Research Discussion Papers
+RDP_YEAR_PAGES = [                    # NB: hard-coded – avoids JS rendering issues
+    "https://www.rba.gov.au/publications/rdp/2021-2030.html",
+    "https://www.rba.gov.au/publications/rdp/2011-2020.html",
+    "https://www.rba.gov.au/publications/rdp/2001-2010.html",
+    "https://www.rba.gov.au/publications/rdp/1991-2000.html",
+    "https://www.rba.gov.au/publications/rdp/1981-1990.html",
+    "https://www.rba.gov.au/publications/rdp/1971-1980.html",
+    "https://www.rba.gov.au/publications/rdp/1969-1970.html",
+]
+
+RESULTS_CSV = Path("results.csv")
+
+MAX_WORKERS = 12
+TIMEOUT = 30
+DATE_RX_FULL   = re.compile(r"\b\d{1,2}\s+\w+\s+\d{4}\b")   # 26 November 2025
+DATE_RX_YM     = re.compile(r"\b\w+\s+\d{4}\b")             # November 2025
+YEAR_PAGE_RX   = re.compile(r"/(media-releases|speeches)/\d{4}/?$")
+
+logger = setup_logger("RBA")
+
+# --------------------------------------------------------------------------- #
+# UTILS
+# --------------------------------------------------------------------------- #
+def get_soup(url: str) -> BeautifulSoup:
+    resp = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
+    resp.raise_for_status()
+    return BeautifulSoup(resp.text, "html.parser")
+
+
+def find_first_date(text: str) -> str | None:
+    m = DATE_RX_FULL.search(text)
+    if m:
+        return m.group(0).replace("\u00A0", " ").strip()
+    m2 = DATE_RX_YM.search(text)
+    return m2.group(0).replace("\u00A0", " ").strip() if m2 else None
+
+
+def date_key(date_str: str) -> datetime:
+    for fmt in ("%d %B %Y", "%B %Y"):
+        try:
+            return datetime.strptime(date_str, fmt)
+        except ValueError:
+            continue
+    return datetime(MINYEAR, 1, 1)
+
+
+def normalize_date_to_iso(date_str: str) -> str:
+    """
+    Convert a human-readable date like '26 November 2025' or 'November 2025'
+    to 'YYYY-MM-DD'. If only month/year is known, use day=1.
+    Returns '' on failure or if date_str is empty/'N/A'.
+    """
+    if not date_str or date_str == "N/A":
+        return ""
+
+    date_str = " ".join(date_str.split())  # normalize spaces
+
+    # Try full day-month-year first
+    try:
+        dt = datetime.strptime(date_str, "%d %B %Y")
+        return dt.strftime("%Y-%m-%d")
+    except ValueError:
+        pass
+
+    # Then try month-year (assume day = 1)
+    try:
+        dt = datetime.strptime(date_str, "%B %Y")
+        return dt.replace(day=1).strftime("%Y-%m-%d")
+    except ValueError:
+        pass
+
+    return ""
+
+
+def gather_article_meta(urls: Iterable[str]) -> List[Tuple[str, str, str]]:
+    """Fetch every article URL → (title, url, raw_date_str)."""
+    results: List[Tuple[str, str, str]] = []
+
+    def _worker(u: str) -> Tuple[str, str, str]:
+        psoup = get_soup(u)
+        title_el = psoup.find("h1") or psoup.title
+        title = title_el.get_text(strip=True) if title_el else u
+        raw_text = psoup.get_text(" ", strip=True)
+        date = find_first_date(raw_text) or "N/A"
+        return title, u, date
+
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
+        futures = {ex.submit(_worker, u): u for u in urls}
+        for fut in as_completed(futures):
+            try:
+                results.append(fut.result())
+            except Exception as exc:
+                logger.warning("Failed to parse %s: %s", futures[fut], exc)
+    results.sort(key=lambda r: date_key(r[2]), reverse=True)
+    return results
+
+# --------------------------------------------------------------------------- #
+# SCRAPERS
+# --------------------------------------------------------------------------- #
+def crawl_media_releases() -> List[Tuple[str, str, str]]:
+    base = SEEDS["media"]
+    soup = get_soup(base)
+    year_hrefs = {urljoin(base, a["href"]) for a in soup.select("a[href]")
+                  if YEAR_PAGE_RX.search(a["href"])}
+    year_hrefs.add(base)
+    article_links = set()
+    for yurl in year_hrefs:
+        ysoup = get_soup(yurl)
+        for a in ysoup.select('a[href^="/media-releases/"]'):
+            href = a["href"]
+            if re.search(r"/\d{4}/mr-", href):
+                article_links.add(urljoin(base, href))
+    return gather_article_meta(article_links)
+
+
+def crawl_speeches() -> List[Tuple[str, str, str]]:
+    base = SEEDS["speech"]
+    soup = get_soup(base)
+    year_hrefs = {urljoin(base, a["href"]) for a in soup.select("a[href]")
+                  if YEAR_PAGE_RX.search(a["href"])}
+    year_hrefs.add(base)
+    article_links = set()
+    for yurl in year_hrefs:
+        ysoup = get_soup(yurl)
+        for a in ysoup.select('a[href^="/speeches/"]'):
+            href = a["href"]
+            if re.search(r"/\d{4}/sp-.*\.html?$", href):
+                article_links.add(urljoin(base, href))
+    return gather_article_meta(article_links)
+
+
+def crawl_research() -> List[Tuple[str, str, str]]:
+    """
+    Research: scrape every Research Discussion Paper from the fixed
+    year-index pages under /publications/rdp/.  (Avoids JS on /research/.)
+    """
+    article_links = set()
+    for index_url in RDP_YEAR_PAGES:
+        ysoup = get_soup(index_url)
+        # RDP pages look like /publications/rdp/YYYY/yy-zz.html
+        for a in ysoup.select('a[href^="/publications/rdp/"]'):
+            href = a["href"]
+            if re.search(r"/rdp/\d{4}/\d{4}-\d{2}\.html?$", href):
+                article_links.add(urljoin(index_url, href))
+    return gather_article_meta(article_links)
+
+# --------------------------------------------------------------------------- #
+# SELF-TESTS
+# --------------------------------------------------------------------------- #
+def _tests() -> None:
+    assert find_first_date("Sydney 26 November 2025") == "26 November 2025"
+    assert find_first_date("November 2025") == "November 2025"
+    for url in SEEDS.values():
+        assert urlparse(url).scheme.startswith("http")
+
+# --------------------------------------------------------------------------- #
+# MAIN
+# --------------------------------------------------------------------------- #
+def main() -> None:
+    _tests()
+    logger.info("Basic self-tests passed – starting crawl")
+
+    sections = [
+        ("media",    "Media Releases",  crawl_media_releases),
+        ("speech",   "Speeches",        crawl_speeches),
+        ("research", "Research (RDPs)", crawl_research),
+    ]
+
+    total_rows = 0
+
+    for key, label, fn in sections:
+        logger.info("Fetching %s", label)
+        rows = fn()
+        logger.info("%s returned %d articles", label, len(rows))
+
+        # Append to shared results.csv as (yyyy-mm-dd, title, url)
+        with RESULTS_CSV.open("a", newline="", encoding="utf-8") as fh:
+            writer = csv.writer(fh)
+            for title, url, raw_date in rows:
+                iso_date = normalize_date_to_iso(raw_date)
+                writer.writerow([iso_date, title, url])
+
+        total_rows += len(rows)
+        logger.info("Appended %d rows to %s", len(rows), RESULTS_CSV)
+
+    logger.info("Done. Total %d rows appended to %s", total_rows, RESULTS_CSV)
+
+
+if __name__ == "__main__":
+    main()
+\n=== FILE END ===
+
+=== FILE START ===
+path: src/logging_utils.py
+encoding: utf-8
+---
+import logging
+import sys
+
+# ANSI escape codes for readable log colors
+_COLOR_MAP = {
+    logging.DEBUG: "\033[37m",   # white
+    logging.INFO: "\033[36m",    # cyan
+    logging.WARNING: "\033[33m", # yellow
+    logging.ERROR: "\033[31m",   # red
+    logging.CRITICAL: "\033[41m" # red background
+}
+_RESET = "\033[0m"
+
+
+class _ColorFormatter(logging.Formatter):
+    """Inject ANSI colors into log records for better readability."""
+
+    def format(self, record: logging.LogRecord) -> str:
+        message = super().format(record)
+        color = _COLOR_MAP.get(record.levelno, "")
+        if color:
+            return f"{color}{message}{_RESET}"
+        return message
+
+
+def setup_logger(name: str, level: int = logging.INFO) -> logging.Logger:
+    """
+    Configure and return a logger with consistent formatting and colors.
+    This helper avoids duplicate handlers if called multiple times.
+    """
+    logger = logging.getLogger(name)
+    if logger.handlers:
+        return logger
+
+    handler = logging.StreamHandler(sys.stdout)
+    fmt = "[%(asctime)s] [%(name)s] %(levelname)s: %(message)s"
+    datefmt = "%H:%M:%S"
+    handler.setFormatter(_ColorFormatter(fmt=fmt, datefmt=datefmt))
+
+    logger.addHandler(handler)
+    logger.setLevel(level)
+    logger.propagate = False
+    return logger
+\n=== FILE END ===
+
+=== FILE START ===
+path: src/paths.py
+encoding: utf-8
+---
+from pathlib import Path
+
+# Base directory for this repository (root that contains the src/ folder).
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Folder to store scraper outputs so the web server can read them.
+DATA_DIR = BASE_DIR / "data"
+DATA_DIR.mkdir(exist_ok=True)
+
+# Canonical output files for each scraper.
+APRA_RESULTS = DATA_DIR / "apra_results.csv"
+FMA_RESULTS = DATA_DIR / "fma_media_releases.csv"
+RBNZ_RESULTS = DATA_DIR / "rbnz_latest_news.csv"
+RBA_RESULTS = DATA_DIR / "rba_news_latest_100.csv"
+\n=== FILE END ===
+
+=== FILE START ===
+path: src/web_server.py
+encoding: utf-8
+---
+from __future__ import annotations
+
+import argparse
+import csv
+import html
+import os
+import socket
+import threading
+from datetime import datetime
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+from typing import Dict, List
+from urllib.parse import parse_qs, urlparse
+
+from correct_apra import scrape_apra
+from correct_fma_govt_nz_2 import scrape_fma
+from correct_rba_news_3 import scrape_rba
+from correct_rbnz_1 import scrape_rbnz
+from logging_utils import setup_logger
+from paths import (
+    APRA_RESULTS,
+    DATA_DIR,
+    FMA_RESULTS,
+    RBA_RESULTS,
+    RBNZ_RESULTS,
+)
+
+logger = setup_logger("WEB")
+
+DEFAULT_REFRESH_SECONDS = 60 * 60  # 1 hour
+ALL_SOURCES_SLUG = "all"
+ALL_SOURCES_TITLE = "All Data Sources"
+
+SOURCES: Dict[str, Dict[str, Path | str]] = {
+    "apra": {"title": "APRA News & Publications", "file": APRA_RESULTS, "label": "APRA"},
+    "fma": {"title": "FMA Media Releases", "file": FMA_RESULTS, "label": "FMA"},
+    "rbnz": {"title": "RBNZ News (latest 30)", "file": RBNZ_RESULTS, "label": "RBNZ"},
+    "rba": {"title": "RBA News (latest 100)", "file": RBA_RESULTS, "label": "RBA"},
+}
+
+SCRAPE_FUNCS = {
+    "apra": scrape_apra,
+    "fma": scrape_fma,
+    "rbnz": scrape_rbnz,
+    "rba": scrape_rba,
+}
+
+VALID_SORT_ORDERS = {"asc", "desc"}
+
+
+def run_all_scrapers():
+    """Run all source scrapers in parallel."""
+    jobs = [(name.upper(), fn) for name, fn in SCRAPE_FUNCS.items()]
+    threads = []
+
+    def _runner(name, fn):
+        try:
+            logger.info("Starting %s scrape", name)
+            fn(save=True)
+            logger.info("Finished %s scrape", name)
+        except Exception as exc:
+            logger.error("%s scrape failed: %s", name, exc)
+
+    for name, fn in jobs:
+        t = threading.Thread(target=_runner, args=(name, fn), daemon=True)
+        threads.append(t)
+        t.start()
+
+    for t in threads:
+        t.join()
+
+
+def start_scrape_scheduler(interval_seconds: int) -> threading.Event:
+    """
+    Start a background thread that re-runs all scrapers every
+    `interval_seconds`. Returns an event that can be set to stop the loop.
+    """
+    stop_event = threading.Event()
+    min_interval = max(interval_seconds, 60)  # avoid noisy hammering
+
+    def _worker():
+        while not stop_event.wait(min_interval):
+            run_all_scrapers()
+
+    thread = threading.Thread(target=_worker, daemon=True)
+    thread.start()
+    logger.info("Scheduled scrapers every %d seconds", min_interval)
+    return stop_event
+
+
+def read_rows(path: Path) -> List[Dict[str, str]]:
+    """
+    Read CSV rows as dictionaries with keys date/title/url.
+    Missing files return an empty list.
+    """
+    if not path.exists():
+        logger.warning("Results file not found: %s", path)
+        return []
+
+    rows: List[Dict[str, str]] = []
+    with open(path, newline="", encoding="utf-8") as f:
+        reader = csv.reader(f)
+        for row in reader:
+            if len(row) < 3:
+                continue
+            date, title, url, *_ = row
+            rows.append({"date": date, "title": title, "url": url})
+    return rows
+
+
+def format_timestamp(path: Path) -> str:
+    if not path.exists():
+        return "not found"
+    ts = datetime.fromtimestamp(path.stat().st_mtime)
+    return ts.strftime("%Y-%m-%d %H:%M:%S")
+
+
+def latest_sources_timestamp() -> str:
+    files = [Path(meta["file"]) for meta in SOURCES.values()]
+    existing = [path for path in files if path.exists()]
+    if not existing:
+        return "not found"
+    newest = max(existing, key=lambda path: path.stat().st_mtime)
+    return format_timestamp(newest)
+
+
+def parse_sort_order(raw: str | None) -> str:
+    if raw and raw.lower() in VALID_SORT_ORDERS:
+        return raw.lower()
+    return "desc"
+
+
+def parse_date_value(value: str) -> datetime:
+    if not isinstance(value, str):
+        return datetime.min
+    cleaned = value.strip()
+    for parser in (
+        lambda v: datetime.fromisoformat(v),
+        lambda v: datetime.strptime(v, "%d %B %Y"),
+        lambda v: datetime.strptime(v, "%d %b %Y"),
+    ):
+        try:
+            return parser(cleaned)
+        except Exception:
+            continue
+    return datetime.min
+
+
+def sort_entries(entries: List[Dict[str, str]], sort_order: str) -> List[Dict[str, str]]:
+    reverse = sort_order == "desc"
+    return sorted(
+        entries,
+        key=lambda entry: (parse_date_value(entry.get("date", "")), entry.get("title", "")),
+        reverse=reverse,
+    )
+
+
+def build_all_entries() -> List[Dict[str, str]]:
+    combined: List[Dict[str, str]] = []
+    for slug, meta in SOURCES.items():
+        label = str(meta.get("label") or slug.upper())
+        for entry in read_rows(Path(meta["file"])):
+            entry_with_source = dict(entry)
+            entry_with_source["source"] = label
+            combined.append(entry_with_source)
+    return combined
+
+
+def render_table(
+    name: str,
+    title: str,
+    entries: List[Dict[str, str]],
+    refresh_seconds: int,
+    sort_order: str,
+    show_source: bool = False,
+    allow_refresh: bool = True,
+) -> str:
+    col_count = 4 if show_source else 3
+    next_sort = "asc" if sort_order == "desc" else "desc"
+    sort_hint = "newest first" if sort_order == "desc" else "oldest first"
+
+    rows_html = ""
+    for entry in entries:
+        source_cell = ""
+        if show_source:
+            source_cell = f"<td>{html.escape(entry.get('source', 'Unknown'))}</td>"
+        rows_html += (
+            f"<tr>{source_cell}"
+            f"<td>{html.escape(entry.get('date', ''))}</td>"
+            f"<td>{html.escape(entry.get('title', ''))}</td>"
+            f"<td><a href='{html.escape(entry.get('url', ''))}' target='_blank' rel='noopener noreferrer'>link</a></td>"
+            f"</tr>"
+        )
+
+    if not rows_html:
+        rows_html = f"<tr><td colspan='{col_count}' style='text-align:center'>No data available</td></tr>"
+
+    refresh_controls = ""
+    if allow_refresh:
+        refresh_controls = f"""
+      <form method="post" action="/refresh/{name}" style="margin:0;">
+        <button type="submit" style="padding:6px 12px; cursor:pointer;">Refresh now</button>
+      </form>"""
+
+    auto_refresh_ms = max(refresh_seconds, 5) * 1000
+    return f"""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="{refresh_seconds}" />
+  <title>{html.escape(title)}</title>
+  <style>
+    body {{
+      font-family: Arial, sans-serif;
+      margin: 24px;
+      background: #f8fafc;
+      color: #0f172a;
+    }}
+    header {{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }}
+    a {{
+      color: #0f6efd;
+      text-decoration: none;
+    }}
+    a:hover {{
+      text-decoration: underline;
+    }}
+    table {{
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }}
+    th, td {{
+      padding: 10px 12px;
+      border-bottom: 1px solid #e2e8f0;
+    }}
+    th {{
+      text-align: left;
+      background: #f1f5f9;
+      font-weight: 600;
+    }}
+  </style>
+  <script>
+    setTimeout(() => window.location.reload(), {auto_refresh_ms});
+  </script>
+</head>
+<body>
+  <header>
+    <div style="flex:1;">
+      <h1 style="margin: 0;">{html.escape(title)}</h1>
+      <p style="margin: 4px 0 0;">Auto-refresh every {refresh_seconds} seconds.</p>
+    </div>
+    <div style="display:flex; gap:8px; align-items:center;">
+      {refresh_controls}
+      <button onclick="window.location.href='/'" style="padding:6px 12px; cursor:pointer;">Homepage</button>
+    </div>
+  </header>
+  <table>
+    <thead>
+      <tr>
+        {'<th style="width: 120px;">Source</th>' if show_source else ''}
+        <th style="width: 150px;">
+          <a href='/{name}?sort={next_sort}' style="color:inherit; text-decoration:none;">
+            Date (current: {sort_hint}, switch to {next_sort})
+          </a>
+        </th>
+        <th>Title</th>
+        <th style="width: 70px;">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows_html}
+    </tbody>
+  </table>
+</body>
+</html>
+"""
+
+
+def render_index(refresh_seconds: int) -> str:
+    cards = [
+        f"<li><a href='/{ALL_SOURCES_SLUG}'><strong>{html.escape(ALL_SOURCES_TITLE)}</strong></a>"
+        f" — updated {latest_sources_timestamp()}</li>"
+    ]
+    for slug, meta in SOURCES.items():
+        path = Path(meta["file"])
+        cards.append(
+            f"<li><a href='/{slug}'><strong>{html.escape(meta['title'])}</strong></a>"
+            f" — updated {format_timestamp(path)}</li>"
+        )
+    card_list = "\n".join(cards)
+    return f"""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="{refresh_seconds}" />
+  <title>Scraper Results</title>
+  <style>
+    body {{
+      font-family: Arial, sans-serif;
+      margin: 24px;
+      background: #f8fafc;
+      color: #0f172a;
+    }}
+    h1 {{
+      margin-bottom: 8px;
+    }}
+    ul {{
+      padding-left: 18px;
+    }}
+  </style>
+  <script>
+    setTimeout(() => window.location.reload(), {refresh_seconds * 1000});
+  </script>
+</head>
+<body>
+  <h1>Scraper Results</h1>
+  <p>Choose a source below. Pages auto-refresh every {refresh_seconds} seconds.</p>
+  <ul>
+    {card_list}
+  </ul>
+</body>
+</html>
+"""
+
+
+class ResultsHandler(BaseHTTPRequestHandler):
+    refresh_seconds: int = DEFAULT_REFRESH_SECONDS
+
+    def do_POST(self):
+        parsed = urlparse(self.path)
+        path = parsed.path.rstrip("/")
+        if path.startswith("/refresh/"):
+            slug = path.split("/refresh/", 1)[1]
+            if slug in SCRAPE_FUNCS:
+                self._trigger_refresh(slug)
+                return
+        self._respond(404, "<h1>404 Not Found</h1>")
+
+    def do_GET(self):
+        parsed = urlparse(self.path)
+        path = parsed.path.rstrip("/") or "/"
+        query = parse_qs(parsed.query)
+        sort_order = parse_sort_order((query.get("sort") or [None])[0])
+
+        if path == "/":
+            body = render_index(self.refresh_seconds)
+            self._respond(200, body)
+            return
+
+        slug = path.lstrip("/")
+        if slug == ALL_SOURCES_SLUG:
+            entries = sort_entries(build_all_entries(), sort_order)
+            body = render_table(
+                slug,
+                ALL_SOURCES_TITLE,
+                entries,
+                self.refresh_seconds,
+                sort_order,
+                show_source=True,
+                allow_refresh=False,
+            )
+            self._respond(200, body)
+            return
+
+        if slug in SOURCES:
+            meta = SOURCES[slug]
+            file_path = Path(meta["file"])
+            entries = sort_entries(read_rows(file_path), sort_order)
+            body = render_table(slug, meta["title"], entries, self.refresh_seconds, sort_order)
+            self._respond(200, body)
+            return
+
+        self._respond(404, "<h1>404 Not Found</h1>")
+
+    def log_message(self, fmt, *args):
+        logger.info("%s - %s", self.address_string(), fmt % args)
+
+    def _respond(self, status: int, body: str):
+        encoded = body.encode("utf-8")
+        self.send_response(status)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(encoded)))
+        self.end_headers()
+        self.wfile.write(encoded)
+
+    def _trigger_refresh(self, slug: str):
+        fn = SCRAPE_FUNCS.get(slug)
+        if not fn:
+            self._respond(404, "<h1>Unknown source</h1>")
+            return
+
+        def _run():
+            try:
+                logger.info("Manual refresh requested for %s", slug)
+                fn(save=True)
+                logger.info("Manual refresh finished for %s", slug)
+            except Exception as exc:
+                logger.error("Manual refresh failed for %s: %s", slug, exc)
+
+        threading.Thread(target=_run, daemon=True).start()
+        body = f"""
+<!DOCTYPE html>
+<html><head>
+  <meta http-equiv="refresh" content="1;url=/{slug}" />
+  <title>Refreshing {slug}</title>
+</head>
+<body>
+  <p>Refreshing {html.escape(slug)}... Redirecting back.</p>
+</body></html>
+"""
+        self._respond(202, body)
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Serve scraper results over HTTP.")
+    parser.add_argument(
+        "--host",
+        default=os.environ.get("HOST", "0.0.0.0"),
+        help="Host to bind (default: 0.0.0.0 for LAN access)",
+    )
+    parser.add_argument(
+        "--port",
+        type=int,
+        default=int(os.environ.get("PORT", "8000")),
+        help="Port to bind (default: 8000)",
+    )
+    parser.add_argument(
+        "--refresh-seconds",
+        type=int,
+        default=int(os.environ.get("REFRESH_SECONDS", DEFAULT_REFRESH_SECONDS)),
+        help="Auto-refresh interval in seconds (default: 3600)",
+    )
+    parser.add_argument(
+        "--scrape-interval",
+        type=int,
+        default=int(os.environ.get("SCRAPE_INTERVAL", DEFAULT_REFRESH_SECONDS)),
+        help="How often to rerun scrapers in seconds (default: matches refresh interval)",
+    )
+    return parser.parse_args()
+
+
+def guess_lan_ip() -> str | None:
+    """
+    Best-effort LAN IP discovery.
+    Tries a UDP connect trick first, then falls back to hostname lookup.
+    """
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+            s.connect(("8.8.8.8", 80))
+            ip = s.getsockname()[0]
+            if ip and not ip.startswith("127."):
+                return ip
+    except Exception:
+        pass
+
+    try:
+        ip = socket.gethostbyname(socket.gethostname())
+        if ip and not ip.startswith("127."):
+            return ip
+    except Exception:
+        pass
+
+    return None
+
+
+def main():
+    args = parse_args()
+    ResultsHandler.refresh_seconds = max(args.refresh_seconds, 5)
+    scrape_interval = max(args.scrape_interval, 60)
+
+    # Run scrapers once up-front so pages have data immediately (best effort).
+    try:
+        run_all_scrapers()
+    except Exception as exc:  # pragma: no cover
+        logger.error("Initial scraping failed; continuing to serve existing data: %s", exc)
+
+    stop_event = start_scrape_scheduler(scrape_interval)
+
+    server = ThreadingHTTPServer((args.host, args.port), ResultsHandler)
+    local_url = f"http://localhost:{args.port}/"
+    lan_ip = guess_lan_ip()
+    lan_url = f"http://{lan_ip}:{args.port}/" if lan_ip else "LAN IP unavailable"
+
+    logger.info(
+        "Serving scraper results from %s (page refresh every %d s, scrape every %d s)",
+        DATA_DIR,
+        ResultsHandler.refresh_seconds,
+        scrape_interval,
+    )
+    logger.info("Local access:   %s", local_url)
+    if lan_ip:
+        logger.info("LAN access:     %s", lan_url)
+    else:
+        logger.warning("LAN access:     unavailable (could not detect LAN IP)")
+
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        logger.info("Shutting down server")
+    finally:
+        stop_event.set()
+        server.server_close()
+
+
+if __name__ == "__main__":
+    main()
+\n=== FILE END ===
+
